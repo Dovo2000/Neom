@@ -5,18 +5,27 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour {
 
     Animator animator; // Variable privada que referencia a l’animador
+<<<<<<< Updated upstream
     bool doubleJumpAllowed = false;
     bool onGround = false;
     
+=======
+    short doubleJumpCounter = 0;
+    short maxJumps = 2;
+>>>>>>> Stashed changes
     // Use this for initialization
     void Start()
     {
         animator = GetComponent<Animator>(); // Agafem l’animador del objecte de la jerarquia al que també tenim associat l’script a través del mètode “GetComponent”, definim que volem un tipus “Animator”
+<<<<<<< Updated upstream
         
+=======
+>>>>>>> Stashed changes
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+<<<<<<< Updated upstream
         if (GetComponent<Rigidbody2D>().velocity.y == 0)
         {
             onGround = true;
@@ -70,6 +79,32 @@ public class Movimiento : MonoBehaviour {
              animator.SetTrigger("Quieto");
             
         }
+=======
+
+        // Activem triggers segons input previ
+        
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(30, 0));
+            animator.SetTrigger("Camina");
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(-30, 0));
+            animator.SetTrigger("Camina");
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (doubleJumpCounter < maxJumps)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
+                animator.SetTrigger("Salta");
+                doubleJumpCounter++;
+            }
+        }
+        if(!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKeyDown(KeyCode.UpArrow))
+            animator.SetTrigger("Quieto");
+>>>>>>> Stashed changes
 
     }
 
