@@ -1745,6 +1745,7 @@ GameObject:
   - component: {fileID: 1015133914}
   - component: {fileID: 1015133913}
   - component: {fileID: 1015133912}
+  - component: {fileID: 1015133915}
   m_Layer: 0
   m_Name: Tile (26)
   m_TagString: Untagged
@@ -1835,6 +1836,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -0.59400004, y: 0.497, z: 179.964}
+--- !u!114 &1015133915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015133911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9b4eb91dd98b548bc2e33f20408252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &1051566148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,6 +2632,7 @@ GameObject:
   - component: {fileID: 1633028117}
   - component: {fileID: 1633028116}
   - component: {fileID: 1633028115}
+  - component: {fileID: 1633028118}
   m_Layer: 0
   m_Name: Tile (25)
   m_TagString: Untagged
@@ -2709,6 +2723,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -0.59400004, y: 0.497, z: 179.964}
+--- !u!114 &1633028118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633028114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9b4eb91dd98b548bc2e33f20408252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &1688405372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,6 +2844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727990045}
   - component: {fileID: 1727990044}
+  - component: {fileID: 1727990047}
   m_Layer: 0
   m_Name: DoorLocked
   m_TagString: Untagged
@@ -2883,6 +2910,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1727990047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727990043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9b4eb91dd98b548bc2e33f20408252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &1749443293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,7 +3210,7 @@ GameObject:
   - component: {fileID: 2005150538}
   m_Layer: 0
   m_Name: 95281a5e9067922dfec75360b70073f1_3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

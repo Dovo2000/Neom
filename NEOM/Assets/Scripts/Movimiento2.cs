@@ -109,6 +109,11 @@ public class Movimiento2 : MonoBehaviour {
         }
         if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKeyDown(KeyCode.UpArrow))
             if (DEBUG) animator.SetTrigger("Quieto");
+
+        
     }
+    
+
+    
 }
 
