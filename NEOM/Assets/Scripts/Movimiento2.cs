@@ -37,13 +37,13 @@ public class Movimiento2 : MonoBehaviour {
         {
             if (onGround)
             {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
+                GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 20));
                 if (DEBUG) animator.SetTrigger("Salta");
             }
             else if (doubleJumpAllowed)
             {
                 Debug.Log("HAS SALTADO DOBLE!!");
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
+                GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 15));
                 if (!onGround)
                 {
                     if (DEBUG) animator.SetTrigger("Salta");
@@ -99,7 +99,7 @@ public class Movimiento2 : MonoBehaviour {
         }
         else if (doubleJumpAllowed && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 15);
             if (!onGround)
             {
                 if (DEBUG) animator.SetTrigger("Salta");
