@@ -6,6 +6,8 @@ public class Movimiento2 : MonoBehaviour {
     Animator animator; // Variable privada que referencia a l’animador
     private bool doubleJumpAllowed = false;
     bool onGround = false;
+    float originalXScale;   //
+    int direction = 1;      // Direcció a la que mira el player
 
     private static bool DEBUG = false;
     
@@ -20,12 +22,12 @@ public class Movimiento2 : MonoBehaviour {
         if (GetComponent<Rigidbody2D>().velocity.y == 0)
         {
             onGround = true;
-            Debug.Log("ON GROUND IS TRUE");
+            
         }
         else
         {
             onGround = false;
-            Debug.Log("ON GROUND IS FAAAAAAAALSE");
+           
         }
 
         if (onGround)
@@ -42,7 +44,7 @@ public class Movimiento2 : MonoBehaviour {
             }
             else if (doubleJumpAllowed)
             {
-                Debug.Log("HAS SALTADO DOBLE!!");
+                
                 GetComponent<Rigidbody2D>().velocity = (new Vector2(0, 15));
                 if (!onGround)
                 {
@@ -50,7 +52,7 @@ public class Movimiento2 : MonoBehaviour {
                 }
 
                 doubleJumpAllowed = false;
-                Debug.Log("HAS SALTADO DOBLE!! Y DOUBLEJUMPALLOWED ES "+doubleJumpAllowed+";");
+                
             }
         }
         // Activem triggers segons input previ
@@ -60,6 +62,7 @@ public class Movimiento2 : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce (new Vector2(30, 0));
             if (onGround)
             {
+                //FlipCharacterDirection();
                 if (DEBUG) animator.SetTrigger("Camina");
             }
 
@@ -69,6 +72,7 @@ public class Movimiento2 : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce (new Vector2(-30, 0));
             if (onGround)
             {
+                //FlipCharacterDirection();
                 if (DEBUG) animator.SetTrigger("Camina");
             }
         }
@@ -112,7 +116,16 @@ public class Movimiento2 : MonoBehaviour {
 
         
     }
-    
+    void FlipCharacterDirection()
+    {
+        direction *= -1;  // Girar el personaje invirtiendo la direccion
+
+        Vector3 scale = transform.localScale; // Guarda la escala local
+
+        scale.x = originalXScale * direction; // 
+
+        transform.localScale = scale;
+    }
 
     
 }
