@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour {
 
         lineRenderer.enabled = true;
 
-        yield return 0;
+        yield return 1;
 
         lineRenderer.enabled = false;
     }
