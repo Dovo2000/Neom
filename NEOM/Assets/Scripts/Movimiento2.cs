@@ -6,7 +6,7 @@ public class Movimiento2 : MonoBehaviour {
     Animator animator; // Variable privada que referencia a l’animador
     private bool doubleJumpAllowed = false;
     bool onGround = false;
-    float originalXScale;   //
+    float originalXScale = 2.5f;   //
     int direction = 1;      // Direcció a la que mira el player
 
     private static bool DEBUG = false;
@@ -62,7 +62,7 @@ public class Movimiento2 : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce (new Vector2(30, 0));
             if (onGround)
             {
-                //FlipCharacterDirection();
+                FlipCharacterDirection();
                 if (DEBUG) animator.SetTrigger("Camina");
             }
 
@@ -72,7 +72,7 @@ public class Movimiento2 : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce (new Vector2(-30, 0));
             if (onGround)
             {
-                //FlipCharacterDirection();
+                FlipCharacterDirection();
                 if (DEBUG) animator.SetTrigger("Camina");
             }
         }
@@ -122,9 +122,10 @@ public class Movimiento2 : MonoBehaviour {
 
         Vector3 scale = transform.localScale; // Guarda la escala local
 
-        scale.x = originalXScale * direction; // 
+        scale.x = originalXScale * direction; // Inverteix la escala 
 
-        transform.localScale = scale;
+        transform.localScale = scale; // Aplica la rotació
+
     }
 
     
