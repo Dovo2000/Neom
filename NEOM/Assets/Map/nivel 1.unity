@@ -384,7 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186517857}
   - component: {fileID: 186517856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831895415}
   - component: {fileID: 831895414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,10 +1189,12 @@ GameObject:
   - component: {fileID: 954410287}
   - component: {fileID: 954410286}
   - component: {fileID: 954410285}
+  - component: {fileID: 954410291}
+  - component: {fileID: 954410290}
   - component: {fileID: 954410284}
   - component: {fileID: 954410289}
   m_Layer: 0
-  m_Name: 95281a5e9067922dfec75360b70073f1_3
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1204,7 +1206,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954410283}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 417c208f4cf780c478dc467e511a65cc, type: 3}
   m_Name: 
@@ -1225,7 +1227,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 5
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -1306,8 +1308,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954410283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.111, y: -3.954, z: 0}
-  m_LocalScale: {x: 2.682019, y: 2.1682534, z: 1.0003275}
+  m_LocalPosition: {x: -6, y: -4.32, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 30
@@ -1318,11 +1320,52 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954410283}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f39074a68041d94bbcded9cbceb74b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &954410290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954410283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64028135983ba74c9f298b15fb8abd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  jumpHeld: 0
+  jumpPressed: 0
+--- !u!114 &954410291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954410283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fd2e45659a83049a32689feec3bf5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebugRaycast: 1
+  speed: 8
+  maxFallSpeed: -25
+  jumpForce: 15
+  doubleJumpForce: 10.7
+  jumpHoldDuration: 0.1
+  feetOffset: 0
+  headDistance: 0.5
+  groundDistance: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  isOnGround: 0
+  isJumping: 0
+  doubleJumpAllowed: 0
+  isHeadBlocked: 0
 --- !u!1 &1061560333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1134342411}
   - component: {fileID: 1134342410}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DoorUnlocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,8 +1514,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -531992053
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bd6a4a53c17c1ce4c9d16ccf1ac7b8f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2317,7 +2360,7 @@ GameObject:
   - component: {fileID: 1550576999}
   - component: {fileID: 1550577001}
   - component: {fileID: 1550577002}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DoorLocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2528,7 +2571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603807078}
   - component: {fileID: 1603807077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2702,7 +2745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694846062}
   - component: {fileID: 1694846061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
