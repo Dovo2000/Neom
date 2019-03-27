@@ -9,7 +9,7 @@ public class Trigger : MonoBehaviour {
     {
         if (collision.CompareTag("Enemies"))
         {
-
+            
         }
     }
 }
