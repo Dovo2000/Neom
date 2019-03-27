@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour {
     public float speed = 2;
     public int detectionRate = 4;
     bool detection = false;
-    int force = -40;
+    int force = 40;
     private Transform target;
 
     void Start()
@@ -33,7 +33,6 @@ public class EnemyMovement : MonoBehaviour {
         if (detection == false)
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
-
         }
         else
         {
