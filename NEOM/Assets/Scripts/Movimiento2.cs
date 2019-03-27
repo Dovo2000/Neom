@@ -7,7 +7,7 @@ public class Movimiento2 : MonoBehaviour {
     private bool doubleJumpAllowed = false;
     bool onGround = false;
     float originalXScale = 2.5f;   //
-    int direction = 1;      // Direcció a la que mira el player
+    int direction;      // Direcció a la que mira el player
 
     private static bool DEBUG = false;
     
@@ -59,9 +59,10 @@ public class Movimiento2 : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody2D>().AddForce (new Vector2(30, 0));
+            GetComponent<Rigidbody2D>().velocity =  (new Vector2(20 * getInput(), GetComponent<Rigidbody2D>().velocity.y));
             if (onGround)
             {
+                direction = 1;
                 FlipCharacterDirection();
                 if (DEBUG) animator.SetTrigger("Camina");
             }
@@ -69,9 +70,10 @@ public class Movimiento2 : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().AddForce (new Vector2(-30, 0));
+            GetComponent<Rigidbody2D>().velocity =  (new Vector2(-20 * getInput(), GetComponent<Rigidbody2D>().velocity.y));
             if (onGround)
             {
+                direction = -1;
                 FlipCharacterDirection();
                 if (DEBUG) animator.SetTrigger("Camina");
             }
@@ -118,7 +120,6 @@ public class Movimiento2 : MonoBehaviour {
     }
     void FlipCharacterDirection()
     {
-        direction *= -1;  // Girar el personaje invirtiendo la direccion
 
         Vector3 scale = transform.localScale; // Guarda la escala local
 
@@ -127,7 +128,14 @@ public class Movimiento2 : MonoBehaviour {
         transform.localScale = scale; // Aplica la rotació
 
     }
-
+    int getInput()
+    {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            return 1;
+        }
+        else return 0;
+    }
     
 }
 
