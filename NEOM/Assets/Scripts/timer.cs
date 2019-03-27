@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour {
 
     float tiempo = 0f;
-    float inicio = 1f;
+    float inicio = 10f;
 
     [SerializeField] Text countdownText;
-    [SerializeField] Transform Respawnpoint;
 
     private void Start()
     {
@@ -25,8 +25,7 @@ public class timer : MonoBehaviour {
         {
             tiempo = 0;
 
-            transform.position = Respawnpoint.position;
-
+            SceneManager.LoadScene(0);
         }
     }
 

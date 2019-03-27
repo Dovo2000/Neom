@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Movimiento2 : MonoBehaviour {
     Animator animator; // Variable privada que referencia a l’animador
     private bool doubleJumpAllowed = false;
@@ -116,4 +117,6 @@ public class Movimiento2 : MonoBehaviour {
 
     
 }
+ 
+
 
