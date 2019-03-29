@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour {
 
-    float tiempo = 0f;
+    float tiempo = 5f;
     float inicio = 10f;
 
     [SerializeField] Text countdownText;
@@ -19,14 +19,15 @@ public class timer : MonoBehaviour {
     private void Update()
     {
         tiempo -= 1 * Time.deltaTime;
-        countdownText.text = tiempo.ToString("0");
+        
 
-        if(tiempo <= 0 )
+        if(tiempo < 0 )
         {
             tiempo = 0;
 
             SceneManager.LoadScene(0);
         }
+        countdownText.text = tiempo.ToString("0");
     }
 
     

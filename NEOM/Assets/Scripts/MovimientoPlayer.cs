@@ -41,6 +41,7 @@ public class MovimientoPlayer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        groundLayer = LayerMask.GetMask("Default");
         // Cogiendo referencias
         input = GetComponent<PlayerInput>();
         rigidBody = GetComponent<Rigidbody2D>();
@@ -60,10 +61,6 @@ public class MovimientoPlayer : MonoBehaviour
         //Procesar Movimiento
         GroundMovement();
         MidAirMovement();
-    }
-    void Update()
-    {
-
     }
 
     void PhysicsCheck()

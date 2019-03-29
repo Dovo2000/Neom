@@ -2843,6 +2843,7 @@ GameObject:
   - component: {fileID: 2005150541}
   - component: {fileID: 2005150540}
   - component: {fileID: 2005150539}
+  - component: {fileID: 2005150543}
   - component: {fileID: 2005150538}
   m_Layer: 0
   m_Name: 95281a5e9067922dfec75360b70073f1_3
@@ -2859,9 +2860,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2005150537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417c208f4cf780c478dc467e511a65cc, type: 3}
+  m_Script: {fileID: 11500000, guid: d64028135983ba74c9f298b15fb8abd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  jumpHeld: 0
+  jumpPressed: 0
 --- !u!50 &2005150539
 Rigidbody2D:
   serializedVersion: 4
@@ -2959,9 +2963,36 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005150537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.111, y: -3.954, z: 0}
+  m_LocalPosition: {x: -6.75, y: -5.33, z: 0}
   m_LocalScale: {x: 2.682019, y: 2.1682534, z: 1.0003275}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2005150543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005150537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fd2e45659a83049a32689feec3bf5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebugRaycast: 1
+  speed: 8
+  maxFallSpeed: -25
+  jumpForce: 22.5
+  doubleJumpForce: 10.7
+  jumpHoldDuration: 0.1
+  feetOffset: 0
+  headDistance: 0.5
+  groundDistance: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isOnGround: 0
+  isJumping: 0
+  doubleJumpAllowed: 0
+  isHeadBlocked: 0

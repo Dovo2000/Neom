@@ -1191,8 +1191,6 @@ GameObject:
   - component: {fileID: 954410285}
   - component: {fileID: 954410291}
   - component: {fileID: 954410290}
-  - component: {fileID: 954410284}
-  - component: {fileID: 954410289}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1200,17 +1198,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &954410284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 954410283}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417c208f4cf780c478dc467e511a65cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &954410285
 Rigidbody2D:
   serializedVersion: 4
@@ -1314,17 +1301,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &954410289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 954410283}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f39074a68041d94bbcded9cbceb74b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &954410290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,7 +1337,7 @@ MonoBehaviour:
   groundDistance: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   isOnGround: 0
   isJumping: 0
   doubleJumpAllowed: 0
@@ -2095,7 +2071,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1308201034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c89c888ac52d984db61af01ba2aa240, type: 3}
   m_Name: 
