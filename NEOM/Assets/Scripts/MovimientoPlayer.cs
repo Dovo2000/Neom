@@ -6,6 +6,7 @@ public class MovimientoPlayer : MonoBehaviour
 {
 
     public bool drawDebugRaycast = true;        //Para dibujar el raycast que comprueba el entorno
+    Weapon firePoint;
 
     [Header("Movement Properties")]
     public float speed = 8f;
@@ -142,11 +143,13 @@ public class MovimientoPlayer : MonoBehaviour
     void FlipCharacterDirection()
     {
         direction *= -1;
-
+        
         Vector3 scale = transform.localScale;
         scale.x = originalXScale * direction;
+       
 
         transform.localScale = scale;
+       
     }
 }
     
