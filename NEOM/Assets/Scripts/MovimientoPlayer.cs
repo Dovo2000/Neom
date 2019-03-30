@@ -15,7 +15,7 @@ public class MovimientoPlayer : MonoBehaviour
     [Header("Jump Properties")]
     public float jumpForce = 22.5f;
     public float doubleJumpForce = 10.7f;
-    public float jumpHoldDuration = 0.1f;
+    public int doubleJumpCounter = 0;
 
     [Header("Enviroment Check Properties")]
     public float feetOffset = 0f;
@@ -27,7 +27,7 @@ public class MovimientoPlayer : MonoBehaviour
     public bool isOnGround;
     public bool isJumping;
     public bool doubleJumpAllowed;
-    public bool isHeadBlocked;                  //Cabeza bloqueada por un techo
+   
 
     PlayerInput input;                          //Input recibido
     BoxCollider2D bodyCollider;
@@ -67,17 +67,11 @@ public class MovimientoPlayer : MonoBehaviour
     void PhysicsCheck()
     {
         isOnGround = false;
-        isHeadBlocked = false;
 
-        RaycastHit2D underCheck = Raycast(new Vector2(feetOffset, -0.37f), Vector2.down, groundDistance);
+        RaycastHit2D underCheck = Raycast(new Vector2(feetOffset, (-playerHeight)-0.3f), Vector2.down, groundDistance);
 
         if (underCheck)
             isOnGround = true;
-
-        RaycastHit2D headCheck = Raycast(new Vector2(0f, playerHeight), Vector2.up, headDistance);
-
-        if (headCheck)
-            isHeadBlocked = true;
 
     }
 
@@ -94,27 +88,34 @@ public class MovimientoPlayer : MonoBehaviour
     void MidAirMovement()
     {
         
+        
         if(input.jumpPressed && !isJumping && isOnGround)
         {  
 
             isOnGround = false;
             isJumping = true;
-            doubleJumpAllowed = true;
+            doubleJumpAllowed = false;
 
             rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
         else if (isJumping)
         {
-
-            if (input.jumpPressed && doubleJumpAllowed)
+            if (!isOnGround && doubleJumpCounter == 0)
+                doubleJumpAllowed = true;
+            if (input.jumpPressed && doubleJumpAllowed && doubleJumpCounter == 0)
             {
                 rigidBody.AddForce(new Vector2(0f, doubleJumpForce), ForceMode2D.Impulse);
+                doubleJumpCounter++;
                 doubleJumpAllowed = false;
             }
             if (isOnGround)
+            {
                 isJumping = false;
+                doubleJumpAllowed = false;
+                doubleJumpCounter = 0;
+            }                             
         }
-
+        
         if (rigidBody.velocity.y < maxFallSpeed)
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, maxFallSpeed);
     }

@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169571842}
   - component: {fileID: 169571841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338821710}
   - component: {fileID: 338821709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2462,7 +2462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1426248925}
   - component: {fileID: 1426248924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3101,7 +3101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749443295}
   - component: {fileID: 1749443294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fondo 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3549,7 +3549,7 @@ MonoBehaviour:
   maxFallSpeed: -25
   jumpForce: 22.5
   doubleJumpForce: 10.7
-  jumpHoldDuration: 0.1
+  doubleJumpCounter: 0
   feetOffset: 0
   headDistance: 0.5
   groundDistance: 0.2
@@ -3559,7 +3559,6 @@ MonoBehaviour:
   isOnGround: 0
   isJumping: 0
   doubleJumpAllowed: 0
-  isHeadBlocked: 0
 --- !u!114 &2005150544
 MonoBehaviour:
   m_ObjectHideFlags: 0
