@@ -35,7 +35,6 @@ public class MovimientoPlayer : MonoBehaviour
 
     float playerHeight;
 
-    float originalXScale;
     int direction = 1;
 
 
@@ -47,8 +46,6 @@ public class MovimientoPlayer : MonoBehaviour
         input = GetComponent<PlayerInput>();
         rigidBody = GetComponent<Rigidbody2D>();
         bodyCollider = GetComponent<BoxCollider2D>();
-        // Guarda la escala X del sprite
-        originalXScale = transform.localScale.x;
         // Guarda la altura del boxCollider
         playerHeight = bodyCollider.size.y;
     }
