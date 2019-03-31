@@ -4388,7 +4388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 913431089}
   firePoint: {fileID: 1653988698}
-  damage: 40
+  damage: 50
 --- !u!1 &2079664820
 GameObject:
   m_ObjectHideFlags: 0

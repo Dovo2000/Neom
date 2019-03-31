@@ -144,12 +144,8 @@ public class MovimientoPlayer : MonoBehaviour
     void FlipCharacterDirection()
     {
         direction *= -1;
-        
-        Vector3 scale = transform.localScale;
-        scale.x = originalXScale * direction;
-       
 
-        transform.localScale = scale;
+        transform.Rotate(0f, 180f, 0f);
        
     }
 }
