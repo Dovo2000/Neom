@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour {
     public Transform firePoint;
     public int damage = 40;
     enum WeaponTypes { GUN, SHOOTGUN, RIFLE };
-    WeaponTypes weapon = WeaponTypes.GUN;
+   
 
     // Update is called once per frame
     void Update() {

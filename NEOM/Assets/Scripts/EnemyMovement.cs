@@ -12,16 +12,13 @@ public class EnemyMovement : MonoBehaviour {
     public LineRenderer lineRenderer;
     public int damage;
     private float timeBtwShoots;
-    public float startTimeBtwShoots;
-    private float timeLine;
-    public float startTimeLine;
+    public float startTimeBtwShoots = 0.5f;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         timeBtwShoots = startTimeBtwShoots;
-        timeLine = startTimeLine;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

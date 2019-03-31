@@ -7,16 +7,12 @@ using UnityEngine.SceneManagement;
 public class timer2 : MonoBehaviour
 {
 
-    float tiempo = 5f;
-    float inicio = 10f;
+    float tiempo = 12f;
+ 
 
     [SerializeField] Text countdownText;
 
-    private void Start()
-    {
-        tiempo = inicio;
-    }
-
+    
     private void Update()
     {
         tiempo -= 1 * Time.deltaTime;
