@@ -9,7 +9,6 @@ public class Weapon : MonoBehaviour {
     public Transform firePoint;
     public int damage = 40;
     enum WeaponTypes { GUN, SHOOTGUN, RIFLE };
-    public AudioSource shot;
    
 
     // Update is called once per frame
@@ -17,7 +16,7 @@ public class Weapon : MonoBehaviour {
         
             if (Input.GetButtonDown("Fire1"))
             {
-                
+                GetComponent<AudioSource>().Play();
                 StartCoroutine(Shoot());
             }
        
