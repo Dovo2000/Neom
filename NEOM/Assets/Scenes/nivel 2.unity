@@ -3519,7 +3519,7 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   firePoint: {fileID: 1264952155}
   lineRenderer: {fileID: 2079664822}
-  detectionRate: 4
+  detectionRate: 10
 --- !u!50 &1628056038
 Rigidbody2D:
   serializedVersion: 4
@@ -4518,6 +4518,7 @@ GameObject:
   - component: {fileID: 2005150543}
   - component: {fileID: 2005150538}
   - component: {fileID: 2005150544}
+  - component: {fileID: 2005150545}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4684,6 +4685,18 @@ MonoBehaviour:
   lineRenderer: {fileID: 913431089}
   firePoint: {fileID: 1653988698}
   damage: 50
+--- !u!114 &2005150545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005150537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9175bc2ad06440b4884b0a3256283eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2079664820
 GameObject:
   m_ObjectHideFlags: 0
