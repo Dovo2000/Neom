@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class Weapon : MonoBehaviour {
     public Transform firePoint;
     public int damage = 40;
     enum WeaponTypes { GUN, SHOOTGUN, RIFLE };
+    public AudioSource shot;
    
 
     // Update is called once per frame
@@ -15,6 +17,7 @@ public class Weapon : MonoBehaviour {
         
             if (Input.GetButtonDown("Fire1"))
             {
+                
                 StartCoroutine(Shoot());
             }
        
