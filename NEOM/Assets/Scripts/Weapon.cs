@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class Weapon : MonoBehaviour {
         
             if (Input.GetButtonDown("Fire1"))
             {
+                GetComponent<AudioSource>().Play();
                 StartCoroutine(Shoot());
             }
        

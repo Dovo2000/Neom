@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class timer2 : MonoBehaviour
 {
 
-    float tiempo = 12f;
+    float tiempo = 20f;
  
 
     [SerializeField] Text countdownText;
