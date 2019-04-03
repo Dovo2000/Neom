@@ -4299,7 +4299,7 @@ Camera:
   far clip plane: 1000
   field of view: 96
   orthographic: 1
-  orthographic size: 9.09349
+  orthographic size: 10.446711
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4493,7 +4493,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 1383164425}
   firePoint: {fileID: 115604090}
   damage: 50
-  shot: {fileID: 0}
 --- !u!114 &2094813410
 MonoBehaviour:
   m_ObjectHideFlags: 0
