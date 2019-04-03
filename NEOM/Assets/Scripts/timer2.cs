@@ -22,9 +22,13 @@ public class timer2 : MonoBehaviour
         {
             tiempo = 0;
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("nivel 2");
         }
         countdownText.text = tiempo.ToString("0");
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
 

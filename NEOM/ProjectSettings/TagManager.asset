@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Trigger
-  tags:
-  - player
   layers:
   - Default
   - TransparentFX
@@ -49,4 +47,7 @@ TagManager:
     locked: 0
   - name: 2
     uniqueID: 695207283
+    locked: 0
+  - name: 3
+    uniqueID: 1057980407
     locked: 0
