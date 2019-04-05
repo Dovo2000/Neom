@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
 
     public void gameOver()
     {
-        SceneManager.LoadScene(0);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
 }
