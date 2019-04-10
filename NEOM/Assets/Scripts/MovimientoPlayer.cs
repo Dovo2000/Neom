@@ -10,6 +10,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     [Header("Movement Properties")]
     public float speed = 8f;
+    public float crouchSpeedDivisor = 3f;
     public float maxFallSpeed = -25f;
 
     [Header("Jump Properties")]
@@ -19,7 +20,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     [Header("Enviroment Check Properties")]
     public float feetOffset = 0f;
-    public float headDistance = 0.5f;
+    public float headDistance = 0.2f;
     public float groundDistance = 0.2f;
     public LayerMask groundLayer;
 
@@ -27,6 +28,8 @@ public class MovimientoPlayer : MonoBehaviour
     public bool isOnGround;
     public bool isJumping;
     public bool doubleJumpAllowed;
+    public bool isCrouching;
+    public bool isHeadBlocked;
    
 
     PlayerInput input;                          //Input recibido
@@ -36,6 +39,11 @@ public class MovimientoPlayer : MonoBehaviour
     float playerHeight;
 
     int direction = 1;
+
+    Vector2 colliderStandSize;
+    Vector2 colliderStandOffset;
+    Vector2 colliderCrouchSize;
+    Vector2 colliderCrouchOffset;
 
 
     // Use this for initialization
@@ -48,6 +56,14 @@ public class MovimientoPlayer : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         // Guarda la altura del boxCollider
         playerHeight = bodyCollider.size.y;
+
+        // Guarda la size y offset inicial del collider
+        colliderStandSize = bodyCollider.size;
+        colliderStandOffset = bodyCollider.offset;
+
+        // Calcula la altura y el offset al estar agachado
+        colliderCrouchSize = new Vector2(bodyCollider.size.x, playerHeight / 2f);
+        colliderCrouchOffset = new Vector2(bodyCollider.offset.x, bodyCollider.offset.y / 2f);
     }
 
     // Update is called once per frame
@@ -59,25 +75,53 @@ public class MovimientoPlayer : MonoBehaviour
         //Procesar Movimiento
         GroundMovement();
         MidAirMovement();
+
     }
 
     void PhysicsCheck()
     {
         isOnGround = false;
+        isHeadBlocked = false;
 
         RaycastHit2D underCheck = Raycast(new Vector2(feetOffset, (-playerHeight)-0.3f), Vector2.down, groundDistance);
 
         if (underCheck)
             isOnGround = true;
 
+        // Raycast para comprobar la si la cabeza está bloqueada
+
+        RaycastHit2D headCheck = Raycast(new Vector2(0f, bodyCollider.size.y * 2f), Vector2.up, headDistance);
+
+        if (headCheck)
+        {
+            isHeadBlocked = true;
+            Debug.Log("Cabeza blockeeada!! el objeto que la bloquea es: "+headCheck.transform.tag);
+        }
+
     }
 
     void GroundMovement()
     {
+        if(input.crouchHeld && !isCrouching && isOnGround)
+        {
+            Crouch();
+        }
+        else if(!input.crouchHeld && isCrouching)
+        {
+            StandUp();
+        }
+        else if(!isOnGround && isCrouching)
+        {
+            StandUp();
+        }
+
         float xVelocity = speed * input.horizontal;
 
         if (xVelocity * direction < 0f)
             FlipCharacterDirection();
+
+        if (isCrouching)
+            xVelocity /= crouchSpeedDivisor;
 
         rigidBody.velocity = new Vector2(xVelocity, rigidBody.velocity.y);
     }
@@ -115,6 +159,27 @@ public class MovimientoPlayer : MonoBehaviour
         
         if (rigidBody.velocity.y < maxFallSpeed)
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, maxFallSpeed);
+    }
+
+    void Crouch()
+    {
+        isCrouching = true;
+
+        // Aplica el cambio de tamaño al agacharse
+
+        bodyCollider.size = colliderCrouchSize;
+        bodyCollider.offset = colliderCrouchOffset;
+    }
+
+    void StandUp()
+    {
+        if (isHeadBlocked)
+            return;
+
+        isCrouching = false;
+
+        bodyCollider.size = colliderStandSize;
+        bodyCollider.offset = colliderCrouchOffset;
     }
 
     RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length)
