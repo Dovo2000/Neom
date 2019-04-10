@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class barraVida : MonoBehaviour {
 
-    private Transform barra;
+    Image barra;
+    public Player vida;
 
-	private void Start () {
-        barra = transform.Find("Barra");
-	}
-	public void SetSize(float sizeNormal)
-    {
-        barra.localScale = new Vector3(sizeNormal, 1f);
+     void Start()
+    {  
+            barra = GetComponent<Image> ();
+            
+             
     }
+    void Update()
+    {
+        barra.fillAmount = (vida.health / 100f);
+    }
+    
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Player : MonoBehaviour
 {
+   
+    public float health;
 
-    public int health;
-
-
-    public void takeDamage(int damage)
+    public void takeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void gameOver()
+      public void gameOver()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
