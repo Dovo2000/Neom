@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class barraVida : MonoBehaviour
 {
 
-    Image barra;
+    private Image barra;
     public Player vida;
    
 
@@ -19,7 +19,7 @@ public class barraVida : MonoBehaviour
     void Update()
     {
        
-        barra.fillAmount = (vida.health / 100f);
+        barra.fillAmount = (vida.health/ 100f);
     }
 
 }
