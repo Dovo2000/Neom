@@ -17,7 +17,7 @@ public class barraVida : MonoBehaviour {
     }
     void Update()
     {
-        barra.fillAmount = (vida.health / 100f);
+        barra.fillAmount = (vida / 100f);
     }
     
 }
