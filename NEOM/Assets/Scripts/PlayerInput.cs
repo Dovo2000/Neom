@@ -9,12 +9,10 @@ public class PlayerInput : MonoBehaviour {
     [HideInInspector]public float horizontal;
     [HideInInspector]public bool jumpHeld;
     [HideInInspector]public bool jumpPressed;
+    [HideInInspector]public bool crouchHeld;
+    [HideInInspector]public bool crouchPressed;
 
     bool readyToClear;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,6 +23,7 @@ public class PlayerInput : MonoBehaviour {
         ProcessInputs();
 
         horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+        
     }
     void FixedUpdate()
     {
@@ -44,6 +43,8 @@ public class PlayerInput : MonoBehaviour {
         horizontal = 0f;
         jumpPressed = false;
         jumpHeld = false;
+        crouchHeld = false;
+        crouchPressed = false;
 
         readyToClear = false;
     }
@@ -54,5 +55,8 @@ public class PlayerInput : MonoBehaviour {
 
         jumpPressed = jumpPressed || Input.GetButtonDown("Jump");
         jumpHeld = jumpHeld || Input.GetButton("Jump");
+
+        crouchHeld = crouchHeld || Input.GetButton("Crouch");
+        crouchPressed = crouchPressed || Input.GetButtonDown("Crouch");
     }
 }
