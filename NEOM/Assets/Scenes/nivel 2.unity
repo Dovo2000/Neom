@@ -787,12 +787,12 @@ GameObject:
   - component: {fileID: 246923546}
   - component: {fileID: 246923545}
   - component: {fileID: 246923544}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &246923544
 AudioListener:
@@ -822,13 +822,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.7
-    height: 0.6
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 1
   orthographic: 1
-  orthographic size: 7.894358
+  orthographic size: 6.9712915
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -838,8 +838,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -851,8 +851,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246923543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: -0.9, y: -0.3, z: -10}
+  m_LocalScale: {x: 283152, y: 1.283152, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

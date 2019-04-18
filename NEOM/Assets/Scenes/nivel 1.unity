@@ -322,7 +322,7 @@ MonoBehaviour:
   detectionRate: 4
   firePoint: {fileID: 1344701156}
   lineRenderer: {fileID: 1859169571}
-  damage: 50
+  damage: 40
   startTimeBtwShoots: 0.5
 --- !u!114 &104402471
 MonoBehaviour:
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   detectionRate: 4
   firePoint: {fileID: 2092191227}
   lineRenderer: {fileID: 417461664}
-  damage: 50
+  damage: 40
   startTimeBtwShoots: 0.5
 --- !u!114 &1799975277
 MonoBehaviour:
@@ -4294,7 +4294,7 @@ MonoBehaviour:
   detectionRate: 4
   firePoint: {fileID: 1932783463}
   lineRenderer: {fileID: 1949928089}
-  damage: 50
+  damage: 40
   startTimeBtwShoots: 0.5
 --- !u!114 &1998203289
 MonoBehaviour:
@@ -4675,6 +4675,8 @@ MonoBehaviour:
   horizontal: 0
   jumpHeld: 0
   jumpPressed: 0
+  crouchHeld: 0
+  crouchPressed: 0
 --- !u!114 &2094813411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,6 +4690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawDebugRaycast: 1
   speed: 8
+  crouchSpeedDivisor: 3
   maxFallSpeed: -25
   jumpForce: 22.5
   doubleJumpForce: 10.7
@@ -4701,6 +4704,8 @@ MonoBehaviour:
   isOnGround: 0
   isJumping: 0
   doubleJumpAllowed: 0
+  isCrouching: 0
+  isHeadBlocked: 0
 --- !u!50 &2094813412
 Rigidbody2D:
   serializedVersion: 4
@@ -4818,6 +4823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!82 &2094813417
 AudioSource:
   m_ObjectHideFlags: 0

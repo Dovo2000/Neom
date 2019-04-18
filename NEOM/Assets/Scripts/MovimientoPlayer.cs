@@ -95,7 +95,7 @@ public class MovimientoPlayer : MonoBehaviour
         if (headCheck)
         {
             isHeadBlocked = true;
-            Debug.Log("Cabeza blockeeada!! el objeto que la bloquea es: "+headCheck.transform.tag);
+           // Debug.Log("Cabeza blockeeada!! el objeto que la bloquea es: "+headCheck.transform.tag);
         }
 
     }
