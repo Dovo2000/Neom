@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour {
     public int detectionRate = 4;
     bool detection = false;
     int force = 40;
+    public Transform detectionPoint;
     private Transform target;
     public Transform firePoint;
     public LineRenderer lineRenderer;
@@ -32,26 +33,21 @@ public class EnemyMovement : MonoBehaviour {
 
     void Update()
     {
-        if ((Vector2.Distance(transform.position, target.position) < detectionRate))
+        RaycastHit2D detectionInfo = Physics2D.Raycast(detectionPoint.position, detectionPoint.right, detectionRate);
+        if (detectionInfo)
         {
-            detection = true;
-        }
-
-        if (detection == false)
-        {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
-
+            if (detectionInfo.collider != null)
+            {
+                StartCoroutine(enemyShoot());
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
+            }
         }
         else
         {
-
-            StartCoroutine(enemyShoot());
-
-
-            if ((Vector2.Distance(transform.position, target.position) > detectionRate))
-            {
-                detection = false;
-            }
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
         }
     }
 
