@@ -24,6 +24,10 @@ public class timer2 : MonoBehaviour
 
             SceneManager.LoadScene("nivel 2");
         }
+        else if(tiempo <= 5)
+        {
+            countdownText.color = Color.red;
+        }
         countdownText.text = tiempo.ToString("0");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
