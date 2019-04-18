@@ -322,7 +322,7 @@ MonoBehaviour:
   detectionRate: 4
   firePoint: {fileID: 1344701156}
   lineRenderer: {fileID: 1859169571}
-  damage: 50
+  damage: 40
   startTimeBtwShoots: 0.5
 --- !u!114 &104402471
 MonoBehaviour:
@@ -4648,7 +4648,7 @@ MonoBehaviour:
   detectionRate: 4
   firePoint: {fileID: 1932783463}
   lineRenderer: {fileID: 1949928089}
-  damage: 50
+  damage: 40
   startTimeBtwShoots: 0.5
 --- !u!114 &1998203289
 MonoBehaviour:
@@ -5178,6 +5178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!82 &2094813417
 AudioSource:
   m_ObjectHideFlags: 0
