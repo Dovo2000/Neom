@@ -7,7 +7,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     public bool drawDebugRaycast = true;        //Para dibujar el raycast que comprueba el entorno
     Weapon firePoint;
-   
+    public Rigidbody2D rb;
 
     [Header("Movement Properties")]
     public float speed = 8f;
@@ -36,7 +36,9 @@ public class MovimientoPlayer : MonoBehaviour
     PlayerInput input;                          //Input recibido
     BoxCollider2D bodyCollider;
     Rigidbody2D rigidBody;
- 
+    public LayerMask Ladder;
+    private bool isClimbing;
+    private float inputVertical;
 
     float playerHeight;
 
@@ -67,7 +69,7 @@ public class MovimientoPlayer : MonoBehaviour
         colliderCrouchSize = new Vector2(bodyCollider.size.x, playerHeight / 2f);
         colliderCrouchOffset = new Vector2(bodyCollider.offset.x, bodyCollider.offset.y / 2f);
 
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -175,6 +177,31 @@ public class MovimientoPlayer : MonoBehaviour
         bodyCollider.offset = colliderCrouchOffset;
     }
 
+    void ladder()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, Ladder);
+
+        if(hitInfo.collider != null)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                isClimbing = true;
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                isClimbing = false;
+            }
+        }
+        if(isClimbing == true && hitInfo.collider != null)
+        {
+            inputVertical = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, inputVertical * 1);
+            rb.gravityScale = 0;
+        }
+    }
 
     void StandUp()
     {
