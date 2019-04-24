@@ -99,7 +99,7 @@ public class MovimientoPlayer : MonoBehaviour
         if (headCheck)
         {
             isHeadBlocked = true;
-           // Debug.Log("Cabeza blockeeada!! el objeto que la bloquea es: "+headCheck.transform.tag);
+            Debug.Log("Cabeza blockeeada!! el objeto que la bloquea es: "+headCheck.transform.tag);
         }
 
     }
@@ -184,7 +184,7 @@ public class MovimientoPlayer : MonoBehaviour
         isCrouching = false;
 
         bodyCollider.size = colliderStandSize;
-        bodyCollider.offset = colliderCrouchOffset;
+        bodyCollider.offset = colliderStandOffset;
     }
 
     RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length)
