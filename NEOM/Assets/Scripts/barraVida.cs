@@ -20,6 +20,11 @@ public class barraVida : MonoBehaviour
     {
        
         barra.fillAmount = (vida.health/ 100f);
+
+        if(vida.health <= 50)
+        {
+            barra.color = Color.red;
+        }
     }
 
 }
