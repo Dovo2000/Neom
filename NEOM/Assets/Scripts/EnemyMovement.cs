@@ -31,12 +31,14 @@ public class EnemyMovement : MonoBehaviour {
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        Debug.Log("FixedUpdate");
         RaycastHit2D detectionInfo = Physics2D.Raycast(detectionPoint.position, detectionPoint.right, detectionRate);
         if (detectionInfo)
         {
-            if (detectionInfo.collider != null)
+            Debug.Log("He chocado con algo de tipo " + detectionInfo.transform.tag);
+            if (detectionInfo.transform.tag == "Player")
             {
                 StartCoroutine(enemyShoot());
             }
