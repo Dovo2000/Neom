@@ -20,15 +20,18 @@ public class enemyNoMove : MonoBehaviour
 
     void update()
     {
-        if ((Vector2.Distance(transform.position, target.position) > detectionRate))
+        RaycastHit2D detectionInfo = Physics2D.Raycast(target.position, target.right);
+        Player player = detectionInfo.transform.GetComponent<Player>();
+
+        if (player)
         {
-            detection = false;
+            detection = true;
         }
-        if(detection == true)
+        if(detection)
         {
             StartCoroutine(enemyShoot());
 
-            if ((Vector2.Distance(transform.position, target.position) > detectionRate))
+            if (player == false)
             {
                 detection = false;
             }
@@ -53,6 +56,7 @@ public class enemyNoMove : MonoBehaviour
                 lineRenderer.SetPosition(0, firePoint.position);
                 lineRenderer.SetPosition(1, hitInfo.point);
             }
+
             else
             {
                 lineRenderer.SetPosition(0, firePoint.position);
