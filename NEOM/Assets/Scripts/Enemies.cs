@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour {
 
-    private int _deathCounter;
+    public int _deathCounter;
 
     public GameObject enemy;
     public int health = 100;
-    public int deathCounter = 0;
+    public float deathCounter = 0;
 
     public void TakeDamage(int damage)
     {

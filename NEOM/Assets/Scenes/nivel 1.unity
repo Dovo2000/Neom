@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c910aa7110a3444d9d24508cadbf01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathCounter: 0
   enemy: {fileID: 104402469}
   health: 100
   deathCounter: 0
@@ -3502,6 +3503,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  muerto1: {fileID: 1799975277}
+  muerto2: {fileID: 1998203289}
+  muerto3: {fileID: 104402471}
 --- !u!1 &1553059076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,6 +4126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c910aa7110a3444d9d24508cadbf01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathCounter: 0
   enemy: {fileID: 1799975275}
   health: 100
   deathCounter: 0
@@ -4750,6 +4755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c910aa7110a3444d9d24508cadbf01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathCounter: 0
   enemy: {fileID: 1998203287}
   health: 100
   deathCounter: 0
