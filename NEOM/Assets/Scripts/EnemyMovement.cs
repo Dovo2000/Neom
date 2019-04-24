@@ -5,10 +5,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
     public float speed = 2;
     public int detectionRate = 4;
-    bool detection = false;
     int force = 40;
     public Transform detectionPoint;
-    private Transform target;
     public Transform firePoint;
     public LineRenderer lineRenderer;
     public int damage;
@@ -17,7 +15,6 @@ public class EnemyMovement : MonoBehaviour {
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         timeBtwShoots = startTimeBtwShoots;
     }
