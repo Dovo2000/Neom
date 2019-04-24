@@ -94,7 +94,7 @@ public class MovimientoPlayer : MonoBehaviour
 
         // Raycast para comprobar la si la cabeza está bloqueada
 
-        RaycastHit2D headCheck = Raycast(new Vector2(0f, bodyCollider.size.y * 2f), Vector2.up, headDistance);
+        RaycastHit2D headCheck = Raycast(new Vector2(0f, bodyCollider.size.y * 2.2f), Vector2.up, headDistance);
 
         if (headCheck)
         {
