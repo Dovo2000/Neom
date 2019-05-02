@@ -5,10 +5,11 @@ using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour {
 
-    public LineRenderer lineRenderer;
+    //public LineRenderer lineRenderer;
     public Transform firePoint;
-    public int damage = 40;
-    enum WeaponTypes { GUN, SHOOTGUN, RIFLE };
+    public GameObject bulletPrefab;
+    //public int damage = 40;
+    //enum WeaponTypes { GUN, SHOOTGUN, RIFLE };
    
 
     // Update is called once per frame
@@ -17,12 +18,13 @@ public class Weapon : MonoBehaviour {
             if (Input.GetButtonDown("Fire1"))
             {
                 GetComponent<AudioSource>().Play();
-                StartCoroutine(Shoot());
+                //StartCoroutine(Shoot());
+                Shoot();
             }
        
     }
 
-    IEnumerator Shoot()
+  /*  IEnumerator Shoot()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
 
@@ -47,6 +49,11 @@ public class Weapon : MonoBehaviour {
         yield return 1;
 
         lineRenderer.enabled = false;
-    }
+    }*/
     
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
 }
