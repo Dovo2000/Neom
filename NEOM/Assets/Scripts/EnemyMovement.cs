@@ -8,14 +8,14 @@ public class EnemyMovement : MonoBehaviour {
     int force = 40;
     public Transform detectionPoint;
     public Transform firePoint;
-    public LineRenderer lineRenderer;
+    //public LineRenderer lineRenderer;
+    public GameObject bulletPrefab;
     public int damage;
     private float timeBtwShoots;
     public float startTimeBtwShoots = 0.5f;
 
     void Start()
     {
-
         timeBtwShoots = startTimeBtwShoots;
     }
 
@@ -37,7 +37,8 @@ public class EnemyMovement : MonoBehaviour {
            // Debug.Log("He chocado con algo de tipo " + detectionInfo.transform.tag);
             if (detectionInfo.transform.tag == "Player")
             {
-                StartCoroutine(enemyShoot());
+                //StartCoroutine(enemyShoot());
+                enemyShoot();
             }
             else
             {
@@ -50,11 +51,11 @@ public class EnemyMovement : MonoBehaviour {
         }
     }
 
-    IEnumerator enemyShoot()
+    void enemyShoot()
     {
         if (timeBtwShoots <= 0)
         {
-            RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+            /*RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
 
             if (hitInfo)
             {
@@ -77,7 +78,9 @@ public class EnemyMovement : MonoBehaviour {
 
             yield return 1;
 
-            lineRenderer.enabled = false;
+            lineRenderer.enabled = false;*/
+
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
             timeBtwShoots = startTimeBtwShoots;
         }
