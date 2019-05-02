@@ -5,8 +5,14 @@ using UnityEngine;
 public class ladder : MonoBehaviour {
 
     public float velo = 6;
-	// Use this for initialization
-	
+   
+    // Use this for initialization
+    void start(){
+        }
+    void update()
+    {
+
+    }
 
     void OnTriggerStay2D(Collider2D other)
     {
@@ -18,9 +24,9 @@ public class ladder : MonoBehaviour {
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velo);
         }
-        else 
+        else if(other.tag == "Player" && Input.GetKey(KeyCode.S) == false && other.tag == "Player" && Input.GetKey(KeyCode.W) == false)
         {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0.82f);
         }
     }
 }
