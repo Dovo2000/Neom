@@ -13,12 +13,12 @@ public class MovimientoPlayer : MonoBehaviour
     public float speed = 8f;
     public float crouchSpeedDivisor = 3f;
     public float maxFallSpeed = -25f;
-
+    /*
     [Header("Jump Properties")]
     public float jumpForce = 22.5f;
     public float doubleJumpForce = 10.7f;
     public int doubleJumpCounter = 0;
-
+    */
     [Header("Enviroment Check Properties")]
     public float feetOffset = 0f;
     public float headDistance = 0.2f;
@@ -78,7 +78,7 @@ public class MovimientoPlayer : MonoBehaviour
 
         //Procesar Movimiento
         GroundMovement();
-        MidAirMovement();
+        //MidAirMovement();
 
     }
 
@@ -130,7 +130,7 @@ public class MovimientoPlayer : MonoBehaviour
         rigidBody.velocity = new Vector2(xVelocity, rigidBody.velocity.y);
     }
 
-    void MidAirMovement()
+    /*void MidAirMovement()
     {
         
         
@@ -164,7 +164,7 @@ public class MovimientoPlayer : MonoBehaviour
         if (rigidBody.velocity.y < maxFallSpeed)
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, maxFallSpeed);
     }
-
+    */
     void Crouch()
     {
         isCrouching = true;

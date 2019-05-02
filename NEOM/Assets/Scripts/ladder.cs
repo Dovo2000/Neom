@@ -6,14 +6,7 @@ public class ladder : MonoBehaviour {
 
     public float velo = 6;
 	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnTriggerStay2D(Collider2D other)
     {
@@ -27,9 +20,7 @@ public class ladder : MonoBehaviour {
         }
         else 
         {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
         }
-       
     }
 }
