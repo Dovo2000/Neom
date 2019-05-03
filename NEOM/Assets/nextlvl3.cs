@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class nextlevel2 : MonoBehaviour
+public class nextlvl3 : MonoBehaviour
 {
 
     public int index;
@@ -11,16 +11,16 @@ public class nextlevel2 : MonoBehaviour
     public Enemies muerto1;
     public Enemies muerto2;
     public Enemies muerto3;
-    public Enemies muerto4;
+ 
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && muerto1.deathCounter == 1 && muerto3.deathCounter == 1 && muerto2.deathCounter == 1 && muerto4.deathCounter == 1)
+        if (other.CompareTag("Player") && muerto1.deathCounter == 1 && muerto3.deathCounter == 1 && muerto2.deathCounter == 1)
         {
 
             Debug.Log("Colisiona con la puerta");
-            SceneManager.LoadScene("Nivel 3");//SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Menu");//SceneManager.GetActiveScene().buildIndex + 1);
 
 
         }
