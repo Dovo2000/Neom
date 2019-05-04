@@ -64,8 +64,8 @@ public class MovimientoPlayer : MonoBehaviour
         colliderStandOffset = bodyCollider.offset;
 
         // Calcula la altura y el offset al estar agachado
-        colliderCrouchSize = new Vector2(bodyCollider.size.x, playerHeight / 2f);
-        colliderCrouchOffset = new Vector2(bodyCollider.offset.x, bodyCollider.offset.y / 2f);
+        colliderCrouchSize = new Vector2(bodyCollider.size.x, playerHeight / 1.75f);
+        colliderCrouchOffset = new Vector2(bodyCollider.offset.x, bodyCollider.offset.y / 1.75f);
 
         
     }
