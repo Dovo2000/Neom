@@ -1106,6 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89c888ac52d984db61af01ba2aa240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inicio: 15
   countdownText: {fileID: 208517095}
 --- !u!114 &208517095
 MonoBehaviour:
@@ -4193,6 +4194,7 @@ GameObject:
   - component: {fileID: 1550576999}
   - component: {fileID: 1550577001}
   - component: {fileID: 1550577002}
+  - component: {fileID: 1550577003}
   m_Layer: 5
   m_Name: DoorLocked
   m_TagString: Untagged
@@ -4298,6 +4300,25 @@ MonoBehaviour:
   muerto1: {fileID: 1799975277}
   muerto2: {fileID: 1998203289}
   muerto3: {fileID: 104402471}
+  animator: {fileID: 1550577003}
+--- !u!95 &1550577003
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1550576998}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f411dcca84b8c87498817e134c65767d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1553059076
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,7 +6263,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2dbe6e83ddf92ea47938055bd978ac14, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

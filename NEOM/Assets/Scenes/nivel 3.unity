@@ -873,6 +873,7 @@ GameObject:
   - component: {fileID: 268889713}
   - component: {fileID: 268889716}
   - component: {fileID: 268889715}
+  - component: {fileID: 268889717}
   - component: {fileID: 268889714}
   m_Layer: 5
   m_Name: DoorLocked
@@ -894,21 +895,24 @@ Transform:
   m_Father: {fileID: 1568658107}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &268889714
-MonoBehaviour:
+--- !u!95 &268889714
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 268889712}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35d264df015497e41a9424a1815ce47d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
-  muerto1: {fileID: 501066882}
-  muerto2: {fileID: 210752003}
-  muerto3: {fileID: 659797222}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f411dcca84b8c87498817e134c65767d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &268889715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -979,6 +983,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &268889717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268889712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d264df015497e41a9424a1815ce47d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  muerto1: {fileID: 501066882}
+  muerto2: {fileID: 210752003}
+  muerto3: {fileID: 659797222}
+  animator: {fileID: 268889714}
 --- !u!1 &281653648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1813,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501066879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.06, y: -3.4212625, z: 0}
+  m_LocalPosition: {x: 6.08, y: -3.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1865444428}
@@ -1970,11 +1990,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501911114}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c89c888ac52d984db61af01ba2aa240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inicio: 13
   countdownText: {fileID: 501911117}
 --- !u!114 &501911117
 MonoBehaviour:
@@ -2570,6 +2591,7 @@ MonoBehaviour:
   muerto1: {fileID: 0}
   muerto2: {fileID: 0}
   muerto3: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!212 &713616025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5792,7 +5814,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2dbe6e83ddf92ea47938055bd978ac14, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

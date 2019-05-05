@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class timer : MonoBehaviour {
 
     float tiempo = 5f;
-    float inicio = 13f;
+    public float inicio;
 
     [SerializeField] Text countdownText;
 
@@ -25,7 +25,8 @@ public class timer : MonoBehaviour {
         {
             tiempo = 0;
 
-            SceneManager.LoadScene("nivel 1");
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
         else if (tiempo <= 4)
         {
