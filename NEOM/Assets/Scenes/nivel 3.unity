@@ -771,6 +771,8 @@ MonoBehaviour:
   enemy: {fileID: 210752000}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &210752004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1834,6 +1836,8 @@ MonoBehaviour:
   enemy: {fileID: 501066879}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &501066883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2268,6 +2272,8 @@ MonoBehaviour:
   enemy: {fileID: 659797219}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &659797223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5158,6 +5164,7 @@ GameObject:
   - component: {fileID: 1573371199}
   - component: {fileID: 1573371198}
   - component: {fileID: 1573371197}
+  - component: {fileID: 1573371206}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5313,6 +5320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fd2e45659a83049a32689feec3bf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1573371206}
   drawDebugRaycast: 1
   speed: 8
   crouchSpeedDivisor: 3
@@ -5434,6 +5442,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1573371206
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573371196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8e178ce63f642c4fb3a106774451741, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1597642590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6782,7 +6808,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2012785862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.172, y: 0.062, z: 0}
+  m_LocalPosition: {x: 0.172, y: 0.055, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1573371205}

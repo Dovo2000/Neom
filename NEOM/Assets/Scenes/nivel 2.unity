@@ -148,6 +148,8 @@ MonoBehaviour:
   enemy: {fileID: 27793154}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &27793156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5252,6 +5254,8 @@ MonoBehaviour:
   enemy: {fileID: 1326338206}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!50 &1326338213
 Rigidbody2D:
   serializedVersion: 4
@@ -6375,6 +6379,8 @@ MonoBehaviour:
   enemy: {fileID: 1628056035}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1628056037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7279,6 +7285,8 @@ MonoBehaviour:
   enemy: {fileID: 1776720934}
   health: 100
   deathCounter: 0
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!50 &1776720940
 Rigidbody2D:
   serializedVersion: 4
@@ -7891,6 +7899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fd2e45659a83049a32689feec3bf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2005150546}
   drawDebugRaycast: 1
   speed: 8
   crouchSpeedDivisor: 3
@@ -8022,9 +8031,9 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005150537}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 43b445aea1438a84f8114ab984c43003, type: 2}
+  m_Controller: {fileID: 9100000, guid: b8e178ce63f642c4fb3a106774451741, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

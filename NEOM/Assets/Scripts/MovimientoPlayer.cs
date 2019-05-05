@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovimientoPlayer : MonoBehaviour
 {
 
+    public Animator animator;
     public bool drawDebugRaycast = true;        //Para dibujar el raycast que comprueba el entorno
     Weapon firePoint;
    
@@ -121,6 +122,8 @@ public class MovimientoPlayer : MonoBehaviour
 
         float xVelocity = speed * input.horizontal;
 
+        animator.SetFloat("Speed", Mathf.Abs(xVelocity));
+
         if (xVelocity * direction < 0f)
             FlipCharacterDirection();
 
@@ -169,6 +172,8 @@ public class MovimientoPlayer : MonoBehaviour
     {
         isCrouching = true;
 
+        animator.SetBool("isCrouching", isCrouching);
+
         // Aplica el cambio de tamaño al agacharse
 
         bodyCollider.size = colliderCrouchSize;
@@ -182,6 +187,7 @@ public class MovimientoPlayer : MonoBehaviour
             return;
 
         isCrouching = false;
+        animator.SetBool("isCrouching", isCrouching);
 
         bodyCollider.size = colliderStandSize;
         bodyCollider.offset = colliderStandOffset;
