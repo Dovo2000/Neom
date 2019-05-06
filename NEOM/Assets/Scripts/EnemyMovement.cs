@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour {
     public int damage;
     private float timeBtwShoots;
     public float startTimeBtwShoots = 0.5f;
+    public Animator animator;
 
     void Start()
     {
@@ -38,16 +39,19 @@ public class EnemyMovement : MonoBehaviour {
             if (detectionInfo.transform.tag == "Player")
             {
                 //StartCoroutine(enemyShoot());
+                animator.SetFloat("Speed", 0);
                 enemyShoot();
             }
             else
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
+                animator.SetFloat("Speed", Mathf.Abs(force));
             }
         }
         else
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
+            animator.SetFloat("Speed", Mathf.Abs(force));
         }
     }
 
