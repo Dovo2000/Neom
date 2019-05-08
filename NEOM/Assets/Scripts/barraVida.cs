@@ -8,7 +8,7 @@ public class barraVida : MonoBehaviour
 {
 
     private Image barra;
-    public Player vida;
+   
    
 
     void Start()
@@ -19,9 +19,9 @@ public class barraVida : MonoBehaviour
     void Update()
     {
        
-        barra.fillAmount = (vida.health/ 100f);
+        barra.fillAmount = (Player.health/ 100f);
 
-        if(vida.health <= 50)
+        if(Player.health <= 50)
         {
             barra.color = Color.red;
         }

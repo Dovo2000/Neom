@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class acidDamage : MonoBehaviour
 {
-
- 
-    public Player acidDmg;
+    public Player player;
 
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
@@ -19,8 +17,7 @@ public class acidDamage : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            acidDmg.health = 0;
-            acidDmg.gameOver();
+            player.gameOver();
         }
        
     }

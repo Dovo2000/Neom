@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237d0fae4736af74e842cc0ee5c87916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acidDmg: {fileID: 1573371198}
+  player: {fileID: 1573371198}
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &132606548
@@ -306,7 +306,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0021348596, y: -0.3454018}
+  m_Offset: {x: 0.0021348, y: -0.44446135}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -317,7 +317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5642695, y: 0.2093696}
+  m_Size: {x: 2.5642695, y: 1.4641273}
   m_EdgeRadius: 0
 --- !u!212 &132606549
 SpriteRenderer:
@@ -1850,7 +1850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067be8b374bd7214e896aad5edd8eb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 1573371198}
 --- !u!114 &457626697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5514,7 +5513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9175bc2ad06440b4884b0a3256283eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1573371199

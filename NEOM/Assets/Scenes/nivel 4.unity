@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  detectionRate: 5
+  detectionRate: 6
   detectionPoint: {fileID: 1336145784}
   firePoint: {fileID: 1351131452}
   bulletPrefab: {fileID: 1705486213168938, guid: 4dd74d8c438442542bbcb97db813a167,
@@ -3554,7 +3554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  detectionRate: 5
+  detectionRate: 9
   detectionPoint: {fileID: 779516848}
   firePoint: {fileID: 873304876}
   bulletPrefab: {fileID: 1705486213168938, guid: 4dd74d8c438442542bbcb97db813a167,
@@ -3960,7 +3960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  detectionRate: 5
+  detectionRate: 6
   detectionPoint: {fileID: 102669610}
   firePoint: {fileID: 455615815}
   bulletPrefab: {fileID: 1705486213168938, guid: 4dd74d8c438442542bbcb97db813a167,
@@ -6168,7 +6168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  detectionRate: 5
+  detectionRate: 6
   detectionPoint: {fileID: 663207111}
   firePoint: {fileID: 2001727247}
   bulletPrefab: {fileID: 1705486213168938, guid: 4dd74d8c438442542bbcb97db813a167,

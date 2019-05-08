@@ -14,13 +14,14 @@ public class Bullet : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        
         Enemies enemy = hitInfo.GetComponent<Enemies>();
         if(enemy != null)
         {
             enemy.TakeDamage(damage);
         }
         if(!hitInfo.CompareTag("Ladder"))
-            Destroy(gameObject);
+        Destroy(gameObject);
     }
 
 }

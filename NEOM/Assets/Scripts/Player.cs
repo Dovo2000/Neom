@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public float health;
-   
+    public static float health = 100;
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
    
@@ -29,6 +28,7 @@ public class Player : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        health = 100;
     }
 
     IEnumerator Flash()
