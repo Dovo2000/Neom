@@ -32,7 +32,7 @@ public class nextlvl3 : MonoBehaviour
 
 
                 //Debug.Log("Colisiona con la puerta");
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             }
         }
