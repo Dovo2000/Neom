@@ -22,7 +22,7 @@ public class MovimientoPlayer : MonoBehaviour
     */
     [Header("Enviroment Check Properties")]
     public float feetOffset = 0f;
-    public float headDistance = 0.2f;
+    public float headDistance = 0.3f;
     public float groundDistance = 0.2f;
     public LayerMask groundLayer;
 
@@ -95,7 +95,7 @@ public class MovimientoPlayer : MonoBehaviour
 
         // Raycast para comprobar la si la cabeza está bloqueada
 
-        RaycastHit2D headCheck = Raycast(new Vector2(0f, bodyCollider.size.y * 2.2f), Vector2.up, headDistance);
+        RaycastHit2D headCheck = Raycast(new Vector2(0f, bodyCollider.size.y * 2.4f), Vector2.up, headDistance);
 
         if (headCheck)
         {
