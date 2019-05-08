@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 80939584}
   - component: {fileID: 80939585}
   - component: {fileID: 80939586}
+  - component: {fileID: 80939587}
   m_Layer: 0
   m_Name: Suelo 6
   m_TagString: Untagged
@@ -198,7 +199,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 2.9836302, y: 0.65726966}
   m_SpriteTilingProperty:
@@ -213,6 +214,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.675285, y: 1.2454606}
   m_EdgeRadius: 0
+--- !u!251 &80939587
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80939583}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &98843349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +2674,7 @@ GameObject:
   - component: {fileID: 771021638}
   - component: {fileID: 771021637}
   - component: {fileID: 771021636}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Ladder 3
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -3199,6 +3218,7 @@ GameObject:
   - component: {fileID: 927061887}
   - component: {fileID: 927061890}
   - component: {fileID: 927061889}
+  - component: {fileID: 927061888}
   m_Layer: 0
   m_Name: Suelo 6 (6)
   m_TagString: Untagged
@@ -3219,6 +3239,24 @@ Transform:
   m_Father: {fileID: 1645321148}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &927061888
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927061886}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!61 &927061889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3229,7 +3267,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 2.5213187, y: 0.620524}
   m_SpriteTilingProperty:
@@ -5204,6 +5242,7 @@ GameObject:
   - component: {fileID: 1421466593}
   - component: {fileID: 1421466595}
   - component: {fileID: 1421466594}
+  - component: {fileID: 1421466596}
   m_Layer: 0
   m_Name: Suelo 5 (BoxCollider)
   m_TagString: Suelo
@@ -5234,7 +5273,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -1.3756094, y: 0.66071}
   m_SpriteTilingProperty:
@@ -5294,6 +5333,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!251 &1421466596
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421466592}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1423654105
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,12 +5615,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1490055607}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c89c888ac52d984db61af01ba2aa240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inicio: 13
+  inicio: 8
   countdownText: {fileID: 1490055610}
 --- !u!114 &1490055610
 MonoBehaviour:
@@ -7655,7 +7712,7 @@ GameObject:
   - component: {fileID: 2122439415}
   - component: {fileID: 2122439414}
   - component: {fileID: 2122439413}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Ladder 1
   m_TagString: Ladder
   m_Icon: {fileID: 0}
