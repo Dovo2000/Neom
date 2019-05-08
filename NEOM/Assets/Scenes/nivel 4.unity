@@ -1039,8 +1039,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 328990558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.21, y: 9.26, z: 0.4788904}
-  m_LocalScale: {x: 3.68, y: 3.68, z: 3.68}
+  m_LocalPosition: {x: -1.041, y: 9.434, z: 0.4788904}
+  m_LocalScale: {x: 4.6, y: 4.6, z: 4.6}
   m_Children:
   - {fileID: 1351131452}
   - {fileID: 1336145784}
@@ -1084,7 +1084,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &328990562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,7 +2657,7 @@ GameObject:
   - component: {fileID: 771021636}
   m_Layer: 9
   m_Name: Ladder 3
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3461,8 +3461,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018314043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.28, y: 12.18, z: 0.4788904}
-  m_LocalScale: {x: 3.68, y: 3.68, z: 3.68}
+  m_LocalPosition: {x: 8.28, y: 12.35, z: 0.4788904}
+  m_LocalScale: {x: 4.6, y: 4.6, z: 4.6}
   m_Children:
   - {fileID: 873304876}
   - {fileID: 779516848}
@@ -3864,8 +3864,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1139046851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.11, y: 5.79, z: 0.479}
-  m_LocalScale: {x: 3.679973, y: 3.679973, z: 3.679973}
+  m_LocalPosition: {x: 5.11, y: 5.96, z: 0.479}
+  m_LocalScale: {x: 4.6, y: 4.6, z: 4.6}
   m_Children:
   - {fileID: 455615815}
   - {fileID: 102669610}
@@ -6056,8 +6056,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1658522021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.42, y: 1.43, z: 0.4788904}
-  m_LocalScale: {x: 3.68, y: 3.68, z: 3.68}
+  m_LocalPosition: {x: 8.42, y: 1.5, z: 0.4788904}
+  m_LocalScale: {x: 4.6, y: 4.6, z: 4.6}
   m_Children:
   - {fileID: 2001727247}
   - {fileID: 663207111}
@@ -7657,7 +7657,7 @@ GameObject:
   - component: {fileID: 2122439413}
   m_Layer: 9
   m_Name: Ladder 1
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
