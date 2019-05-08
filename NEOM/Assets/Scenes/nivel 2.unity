@@ -5838,6 +5838,7 @@ GameObject:
   - component: {fileID: 1470913607}
   - component: {fileID: 1470913608}
   - component: {fileID: 1470913609}
+  - component: {fileID: 1470913610}
   m_Layer: 0
   m_Name: Suelo 14
   m_TagString: Trigger
@@ -5913,7 +5914,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.007493198, y: 0.6492173}
   m_SpriteTilingProperty:
@@ -5928,6 +5929,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5749865, y: 1.2615653}
   m_EdgeRadius: 0
+--- !u!251 &1470913610
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470913606}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &1497543788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6312,7 +6331,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606863430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.06, y: -2.4625387, z: 0.203125}
+  m_LocalPosition: {x: -13, y: -2.4625387, z: 0.203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 544773034}
@@ -7796,6 +7815,7 @@ GameObject:
   - component: {fileID: 2005150545}
   - component: {fileID: 2005150546}
   - component: {fileID: 2005150547}
+  - component: {fileID: 2005150548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7843,7 +7863,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005150537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8091,6 +8111,21 @@ MonoBehaviour:
   health: 100
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+--- !u!70 &2005150548
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005150537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0713445, y: 0.0027392942}
+  m_Size: {x: 0.19877312, y: 0.371417}
+  m_Direction: 0
 --- !u!1 &2050348576
 GameObject:
   m_ObjectHideFlags: 0
