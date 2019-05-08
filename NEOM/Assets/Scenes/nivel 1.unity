@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 104402471}
   - component: {fileID: 104402470}
   - component: {fileID: 104402476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 115604090}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePointP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 135585778}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DetectionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 191164858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DetectionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +1846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417461665}
   - component: {fileID: 417461664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LineE1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2654,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 629177917}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DetectionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2956,7 +2956,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 806109005}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barraVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3879,7 +3879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148737875}
   - component: {fileID: 1148737876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: borde barra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4235,7 +4235,7 @@ GameObject:
   - component: {fileID: 1200939244}
   - component: {fileID: 1200939243}
   - component: {fileID: 1200939242}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4271,7 +4271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067be8b374bd7214e896aad5edd8eb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: {fileID: 2094813416}
 --- !u!114 &1200939243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4835,7 +4834,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1344701156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirePointE3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4864,7 +4863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1383164426}
   - component: {fileID: 1383164425}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LineP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6003,7 +6002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741246645}
   - component: {fileID: 1741246646}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fondo barra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6113,7 +6112,7 @@ GameObject:
   - component: {fileID: 1756595826}
   - component: {fileID: 1756595825}
   - component: {fileID: 1756595824}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: canvas barra vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6211,7 +6210,7 @@ GameObject:
   - component: {fileID: 1799975277}
   - component: {fileID: 1799975276}
   - component: {fileID: 1799975282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6388,7 +6387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859169572}
   - component: {fileID: 1859169571}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LineE3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6782,7 +6781,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1932783463}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirePointE2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6885,7 +6884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949928090}
   - component: {fileID: 1949928089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LineE2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7111,7 +7110,7 @@ GameObject:
   - component: {fileID: 1998203289}
   - component: {fileID: 1998203288}
   - component: {fileID: 1998203294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7551,7 +7550,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2092191227}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirePointE1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7688,7 +7687,7 @@ GameObject:
   - component: {fileID: 2094813417}
   - component: {fileID: 2094813418}
   - component: {fileID: 2094813413}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7857,7 +7856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9175bc2ad06440b4884b0a3256283eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
 --- !u!82 &2094813417
