@@ -2164,6 +2164,7 @@ GameObject:
   - component: {fileID: 524639493}
   - component: {fileID: 524639495}
   - component: {fileID: 524639494}
+  - component: {fileID: 524639496}
   m_Layer: 0
   m_Name: Tile (21) (BC)
   m_TagString: Untagged
@@ -2194,9 +2195,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.42611504, y: 0.64790046}
+  m_Offset: {x: -0.44744158, y: 0.64790046}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2207,7 +2208,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.41223, y: 1.215651}
+  m_Size: {x: 3.4548855, y: 1.215651}
   m_EdgeRadius: 0
 --- !u!212 &524639495
 SpriteRenderer:
@@ -2254,6 +2255,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!251 &524639496
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524639492}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &631043540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,7 +5393,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1573371205}
   - component: {fileID: 1573371204}
-  - component: {fileID: 1573371203}
   - component: {fileID: 1573371202}
   - component: {fileID: 1573371201}
   - component: {fileID: 1573371200}
@@ -5382,6 +5400,7 @@ GameObject:
   - component: {fileID: 1573371198}
   - component: {fileID: 1573371197}
   - component: {fileID: 1573371206}
+  - component: {fileID: 1573371203}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5573,8 +5592,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &1573371203
-BoxCollider2D:
+--- !u!70 &1573371203
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5585,19 +5604,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.37, y: 0.38}
-    newSize: {x: 0.33, y: 0.37}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.37}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.06925046, y: -0.0009495837}
+  m_Size: {x: 0.19852303, y: 0.36922666}
+  m_Direction: 0
 --- !u!212 &1573371204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6987,6 +6996,7 @@ GameObject:
   - component: {fileID: 1895092471}
   - component: {fileID: 1895092473}
   - component: {fileID: 1895092472}
+  - component: {fileID: 1895092474}
   m_Layer: 0
   m_Name: Tile (18) (BC)
   m_TagString: Untagged
@@ -7017,9 +7027,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28377092, y: 0.6470971}
+  m_Offset: {x: 0.38939714, y: 0.6470971}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7030,7 +7040,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.273124, y: 1.2658057}
+  m_Size: {x: 8.484377, y: 1.2658057}
   m_EdgeRadius: 0
 --- !u!212 &1895092473
 SpriteRenderer:
@@ -7077,6 +7087,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!251 &1895092474
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1895092470}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2012785862
 GameObject:
   m_ObjectHideFlags: 0

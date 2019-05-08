@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour {
         {
             enemy.TakeDamage(damage);
         }
+        if(!hitInfo.CompareTag("Ladder"))
         Destroy(gameObject);
     }
 

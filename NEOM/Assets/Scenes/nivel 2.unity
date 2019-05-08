@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 239167017}
   m_Layer: 9
   m_Name: Ladder 4.2
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1575,7 +1575,7 @@ GameObject:
   - component: {fileID: 330037336}
   m_Layer: 9
   m_Name: Ladder 1
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1592,7 +1592,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062175572, y: -0.00000011920929}
+  m_Offset: {x: -0.062175572, y: 0.013209581}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1603,7 +1603,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3281363, y: 2.9626062}
+  m_Size: {x: 1.3281363, y: 2.9890256}
   m_EdgeRadius: 0
 --- !u!212 &330037334
 SpriteRenderer:
@@ -2227,7 +2227,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -531992053
+  m_SortingLayerID: 1057980407
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &493881606
@@ -2535,6 +2535,7 @@ GameObject:
   - component: {fileID: 570645032}
   - component: {fileID: 570645034}
   - component: {fileID: 570645033}
+  - component: {fileID: 570645035}
   m_Layer: 0
   m_Name: Suelo 5 (BoxCollider) (1)
   m_TagString: Suelo
@@ -2565,7 +2566,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 5.1228247, y: 0.66071}
   m_SpriteTilingProperty:
@@ -2625,6 +2626,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!251 &570645035
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570645031}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &620437870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,7 +2731,7 @@ GameObject:
   - component: {fileID: 623569087}
   m_Layer: 9
   m_Name: Ladder 4.1
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2754,7 +2773,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07275444, y: 0.9027271}
+  m_Offset: {x: -0.07275444, y: 0.9193053}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2765,7 +2784,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.412768, y: 4.7680607}
+  m_Size: {x: 1.412768, y: 4.801217}
   m_EdgeRadius: 0
 --- !u!212 &623569089
 SpriteRenderer:
@@ -3324,7 +3343,7 @@ GameObject:
   - component: {fileID: 827864712}
   m_Layer: 9
   m_Name: Ladder 3
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3336,8 +3355,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 827864710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.09, y: -1.975, z: 0}
-  m_LocalScale: {x: 0.60899, y: 0.99675983, z: 0.93735}
+  m_LocalPosition: {x: 9.09, y: -1.9975, z: 0}
+  m_LocalScale: {x: 0.60899, y: 1.0057302, z: 0.93735}
   m_Children: []
   m_Father: {fileID: 1396839558}
   m_RootOrder: 2
@@ -3366,7 +3385,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062175572, y: 0.20843923}
+  m_Offset: {x: -0.062175572, y: 0.014949322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3377,7 +3396,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3281363, y: 2.5457275}
+  m_Size: {x: 1.3281363, y: 3.0047064}
   m_EdgeRadius: 0
 --- !u!212 &827864714
 SpriteRenderer:
@@ -3775,8 +3794,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 695207283
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0b5a6e57e186b7d44a30b8500950eb78, type: 3}
   m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
@@ -3970,8 +3989,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 695207283
+  m_SortingLayer: 2
   m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 0b5a6e57e186b7d44a30b8500950eb78, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -4615,6 +4634,7 @@ GameObject:
   - component: {fileID: 1076464978}
   - component: {fileID: 1076464977}
   - component: {fileID: 1076464976}
+  - component: {fileID: 1076464979}
   m_Layer: 0
   m_Name: Suelo 9 (BoxCollider)
   m_TagString: Untagged
@@ -4632,7 +4652,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -5.7404504, y: 0.66071}
   m_SpriteTilingProperty:
@@ -4705,6 +4725,24 @@ Transform:
   m_Father: {fileID: 202971656}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1076464979
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076464975}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1133214741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,7 +4968,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 3.7884388, y: 0.620524}
   m_SpriteTilingProperty:
@@ -4990,31 +5028,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!61 &1293193187
-BoxCollider2D:
+--- !u!251 &1293193187
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293193183}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.92217666, y: 0.65055555}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7156466, y: 1.2588888}
-  m_EdgeRadius: 0
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1301674418
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,7 +5575,7 @@ GameObject:
   - component: {fileID: 1396839558}
   m_Layer: 0
   m_Name: Ladders
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5654,7 +5685,7 @@ GameObject:
   - component: {fileID: 1439547139}
   m_Layer: 9
   m_Name: Ladder 2
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5696,7 +5727,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062175572, y: 0.20843923}
+  m_Offset: {x: -0.062175572, y: 0.00981921}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5707,7 +5738,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3281363, y: 2.5457275}
+  m_Size: {x: 1.3281363, y: 2.9837117}
   m_EdgeRadius: 0
 --- !u!212 &1439547141
 SpriteRenderer:
@@ -7015,6 +7046,7 @@ GameObject:
   - component: {fileID: 1759241257}
   - component: {fileID: 1759241256}
   - component: {fileID: 1759241255}
+  - component: {fileID: 1759241258}
   m_Layer: 0
   m_Name: Suelo 5 (BoxCollider)
   m_TagString: Suelo
@@ -7032,7 +7064,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 2.0717301, y: 0.66071}
   m_SpriteTilingProperty:
@@ -7105,6 +7137,24 @@ Transform:
   m_Father: {fileID: 202971656}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &1759241258
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759241254}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1760799847
 GameObject:
   m_ObjectHideFlags: 0
@@ -7807,7 +7857,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2005150542}
   - component: {fileID: 2005150541}
-  - component: {fileID: 2005150540}
   - component: {fileID: 2005150539}
   - component: {fileID: 2005150543}
   - component: {fileID: 2005150538}
@@ -7857,31 +7906,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &2005150540
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2005150537}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.07, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.37, y: 0.38}
-    newSize: {x: 0.33, y: 0.37}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.37}
-  m_EdgeRadius: 0
 --- !u!212 &2005150541
 SpriteRenderer:
   m_ObjectHideFlags: 0

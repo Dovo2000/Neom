@@ -35,7 +35,7 @@ public class MovimientoPlayer : MonoBehaviour
    
 
     PlayerInput input;                          //Input recibido
-    BoxCollider2D bodyCollider;
+    CapsuleCollider2D bodyCollider;
     Rigidbody2D rigidBody;
  
 
@@ -56,7 +56,7 @@ public class MovimientoPlayer : MonoBehaviour
         // Cogiendo referencias
         input = GetComponent<PlayerInput>();
         rigidBody = GetComponent<Rigidbody2D>();
-        bodyCollider = GetComponent<BoxCollider2D>();
+        bodyCollider = GetComponent<CapsuleCollider2D>();
         // Guarda la altura del boxCollider
         playerHeight = bodyCollider.size.y;
 
