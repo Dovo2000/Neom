@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 43907532}
   - component: {fileID: 43907531}
   - component: {fileID: 43907530}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ladder 2.1
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 106155078}
   - component: {fileID: 106155080}
   - component: {fileID: 106155079}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4412154, y: 0}
@@ -607,7 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189154070}
   - component: {fileID: 189154071}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: borde barra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 210752003}
   - component: {fileID: 210752002}
   - component: {fileID: 210752007}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1371,7 +1371,7 @@ GameObject:
   - component: {fileID: 324271236}
   - component: {fileID: 324271235}
   - component: {fileID: 324271234}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ladder 1.1
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -1484,7 +1484,7 @@ GameObject:
   - component: {fileID: 337856444}
   - component: {fileID: 337856443}
   - component: {fileID: 337856442}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: canvas barra vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ GameObject:
   - component: {fileID: 457626698}
   - component: {fileID: 457626697}
   - component: {fileID: 457626696}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 501066882}
   - component: {fileID: 501066881}
   - component: {fileID: 501066886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2353,7 +2353,7 @@ GameObject:
   - component: {fileID: 631043541}
   - component: {fileID: 631043543}
   - component: {fileID: 631043542}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ladder 1.2
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -2444,7 +2444,7 @@ GameObject:
   - component: {fileID: 659797222}
   - component: {fileID: 659797221}
   - component: {fileID: 659797226}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2624,7 +2624,7 @@ GameObject:
   - component: {fileID: 678771668}
   - component: {fileID: 678771670}
   - component: {fileID: 678771669}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ladder 1.3
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -2711,7 +2711,7 @@ GameObject:
   - component: {fileID: 683688009}
   - component: {fileID: 683688011}
   - component: {fileID: 683688010}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 'Ladder 3.2 '
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -3713,7 +3713,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 971657256}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: barraVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3800,7 +3800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047076909}
   - component: {fileID: 1047076910}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LineP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4049,6 +4049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092399518}
   - component: {fileID: 1092399519}
+  - component: {fileID: 1092399520}
   m_Layer: 0
   m_Name: Tile (29)
   m_TagString: Untagged
@@ -4114,6 +4115,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1092399520
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092399517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.6834751}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 1.1930498}
+  m_EdgeRadius: 0
 --- !u!1 &1100586918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,7 +4151,7 @@ GameObject:
   - component: {fileID: 1100586922}
   - component: {fileID: 1100586921}
   - component: {fileID: 1100586920}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ladder 3.1
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -4873,7 +4899,7 @@ GameObject:
   - component: {fileID: 1210669533}
   - component: {fileID: 1210669535}
   - component: {fileID: 1210669534}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4928,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4412154, y: 0}
@@ -5372,7 +5398,7 @@ GameObject:
   - component: {fileID: 1570602116}
   - component: {fileID: 1570602118}
   - component: {fileID: 1570602117}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ladder 2.2
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -5540,7 +5566,7 @@ GameObject:
   - component: {fileID: 1573371197}
   - component: {fileID: 1573371206}
   - component: {fileID: 1573371203}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6628,7 +6654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804090630}
   - component: {fileID: 1804090631}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fondo barra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7253,7 +7279,7 @@ GameObject:
   - component: {fileID: 1985712441}
   - component: {fileID: 1985712443}
   - component: {fileID: 1985712442}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7282,7 +7308,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4412154, y: 0}
@@ -7318,7 +7344,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2012785863}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePointP
   m_TagString: Untagged
   m_Icon: {fileID: 0}

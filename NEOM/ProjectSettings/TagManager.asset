@@ -7,6 +7,7 @@ TagManager:
   - Trigger
   - Suelo
   - Ladder
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - ladder
   - Enemies
   - Player
-  - 
-  - 
+  - Bullet
+  - Trigger
   - 
   - 
   - 

@@ -20,8 +20,11 @@ public class Bullet : MonoBehaviour {
         {
             enemy.TakeDamage(damage);
         }
-        if(!hitInfo.CompareTag("Ladder"))
-        Destroy(gameObject);
+        if (!hitInfo.CompareTag("Ladder") || !hitInfo.CompareTag("Trigger"))
+        {
+            Destroy(gameObject);
+
+        }
     }
 
 }
