@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
     public float speed = 2;
     public int detectionRate = 4;
-    int force = 40;
+    public int force = 40;
     public Transform detectionPoint;
     public Transform firePoint;
     //public LineRenderer lineRenderer;
