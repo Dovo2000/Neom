@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour {
     public int detectionRate = 4;
     public int force = 40;
     public Transform detectionPoint;
+    //public Transform detectionPointBack;
     public Transform firePoint;
     //public LineRenderer lineRenderer;
     public GameObject bulletPrefab;
@@ -18,6 +19,7 @@ public class EnemyMovement : MonoBehaviour {
     void Start()
     {
         timeBtwShoots = startTimeBtwShoots;
+        //detectionPointBack.transform.Rotate(0f, 180f, 0f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -33,15 +35,24 @@ public class EnemyMovement : MonoBehaviour {
     {
         // Debug.Log("FixedUpdate");
         RaycastHit2D detectionInfo = Physics2D.Raycast(detectionPoint.position, detectionPoint.right, detectionRate);
-        if (detectionInfo)
+        //RaycastHit2D detectionInfoBack = Physics2D.Raycast(detectionPointBack.position, detectionPointBack.right, detectionRate-3);
+        if (detectionInfo /*|| detectionInfoBack*/)
         {
            // Debug.Log("He chocado con algo de tipo " + detectionInfo.transform.tag);
             if (detectionInfo.transform.tag == "Player")
             {
+                Debug.Log("Player detected");
                 //StartCoroutine(enemyShoot());
                 animator.SetFloat("Speed", 0);
                 enemyShoot();
             }
+            /*else if(detectionInfoBack.transform.tag == "Player")
+            {
+                force *= -1;
+                transform.Rotate(0f, 180f, 0f);
+                animator.SetFloat("Speed", 0);
+                enemyShoot();
+            }*/
             else
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));

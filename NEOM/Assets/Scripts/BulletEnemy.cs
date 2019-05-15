@@ -20,7 +20,7 @@ public class BulletEnemy : MonoBehaviour {
         {
             player.takeDamage(damage);
         }
-        if(!hitInfo.CompareTag("Ladder"))
+        if(!hitInfo.CompareTag("Ladder") || !hitInfo.CompareTag("Trigger"))
             Destroy(gameObject);
     }
 
