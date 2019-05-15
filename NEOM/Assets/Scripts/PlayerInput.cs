@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour {
     //[HideInInspector]public bool jumpPressed;
     [HideInInspector]public bool crouchHeld;
     [HideInInspector]public bool crouchPressed;
+    [HideInInspector] public bool reset;
 
     bool readyToClear;
 	
@@ -45,7 +46,7 @@ public class PlayerInput : MonoBehaviour {
         //jumpHeld = false;
         crouchHeld = false;
         crouchPressed = false;
-
+        reset = false;
         readyToClear = false;
     }
 
@@ -55,6 +56,8 @@ public class PlayerInput : MonoBehaviour {
 
         //jumpPressed = jumpPressed || Input.GetButtonDown("Jump");
         //jumpHeld = jumpHeld || Input.GetButton("Jump");
+
+        reset = Input.GetButtonDown("Jump");
 
         crouchHeld = crouchHeld || Input.GetButton("Crouch");
         crouchPressed = crouchPressed || Input.GetButtonDown("Crouch");

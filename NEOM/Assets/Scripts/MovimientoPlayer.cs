@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovimientoPlayer : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class MovimientoPlayer : MonoBehaviour
     PlayerInput input;                          //Input recibido
     CapsuleCollider2D bodyCollider;
     Rigidbody2D rigidBody;
- 
+    
 
     float playerHeight;
 
@@ -81,6 +82,12 @@ public class MovimientoPlayer : MonoBehaviour
         GroundMovement();
         //MidAirMovement();
 
+        if(input.reset)
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+            Player.health = 100;
+        }
     }
 
     void PhysicsCheck()
