@@ -9,12 +9,14 @@ public class MovimientoPlayer : MonoBehaviour
     public Animator animator;
     public bool drawDebugRaycast = true;        //Para dibujar el raycast que comprueba el entorno
     Weapon firePoint;
-   
+
 
     [Header("Movement Properties")]
+    private float xVelocity;
     public float speed = 8f;
     public float crouchSpeedDivisor = 3f;
     public float maxFallSpeed = -25f;
+    public float slideImpulse = 500.0f;
     /*
     [Header("Jump Properties")]
     public float jumpForce = 22.5f;
@@ -33,6 +35,7 @@ public class MovimientoPlayer : MonoBehaviour
     public bool doubleJumpAllowed;
     public bool isCrouching;
     public bool isHeadBlocked;
+    public bool isSliding;
    
 
     PlayerInput input;                          //Input recibido
@@ -114,7 +117,13 @@ public class MovimientoPlayer : MonoBehaviour
 
     void GroundMovement()
     {
-        if(input.crouchHeld && !isCrouching && isOnGround)
+        xVelocity = speed * input.horizontal;
+
+        if (input.crouchPressed && !isCrouching && isOnGround && Mathf.Abs(xVelocity) > 0.1f)
+        {
+            Slide();
+        }
+        else if (input.crouchHeld && !isCrouching && isOnGround)
         {
             Crouch();
         }
@@ -126,8 +135,7 @@ public class MovimientoPlayer : MonoBehaviour
         {
             StandUp();
         }
-
-        float xVelocity = speed * input.horizontal;
+        
 
         animator.SetFloat("Speed", Mathf.Abs(xVelocity));
 
@@ -187,6 +195,17 @@ public class MovimientoPlayer : MonoBehaviour
         bodyCollider.offset = colliderCrouchOffset;
     }
 
+    void Slide()
+    {
+        isCrouching = false;
+
+        bodyCollider.size = colliderCrouchSize;
+        bodyCollider.offset = colliderCrouchOffset;
+
+        Vector2 fuerzaDeslizado = new Vector2(slideImpulse, 0);
+
+        rigidBody.AddForce(fuerzaDeslizado, ForceMode2D.Impulse);
+    }
 
     void StandUp()
     {
