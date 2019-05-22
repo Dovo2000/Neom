@@ -4,53 +4,47 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour {
-
-    //public LineRenderer lineRenderer;
+    
     public Transform firePoint;
     public GameObject bulletPrefab;
-    //public int damage = 40;
-    //enum WeaponTypes { GUN, SHOOTGUN, RIFLE };
-   
+    private int counterShots = 3;
+
+    private float timeBtwShoots;
+    private float startTimeBtwShoots = 0.5f;
+
+    private void Start()
+    {
+        timeBtwShoots = startTimeBtwShoots;
+    }
 
     // Update is called once per frame
     void Update() {
-        
+
+        if (counterShots > 0)
+        {
             if (Input.GetButtonDown("Fire1"))
             {
                 GetComponent<AudioSource>().Play();
-                //StartCoroutine(Shoot());
                 Shoot();
+                counterShots--;
             }
-       
-    }
-
-  /*  IEnumerator Shoot()
-    {
-        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
-
-        if (hitInfo)
-        {
-            Enemies enemy = hitInfo.transform.GetComponent<Enemies>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-            }
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, hitInfo.point);
         }
         else
         {
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, firePoint.position + firePoint.right * 100);
+            if (timeBtwShoots <= 0)
+            {
+                 timeBtwShoots = startTimeBtwShoots;
+                counterShots = 3;
+            }
+
+            else
+            {
+                timeBtwShoots -= Time.deltaTime;
+            }
         }
+       
+    }
 
-        lineRenderer.enabled = true;
-
-        yield return 1;
-
-        lineRenderer.enabled = false;
-    }*/
-    
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
