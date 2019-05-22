@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static float health = 100;
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
+    public CameraShake cameraShake;
    
 
     public void takeDamage(float damage)
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         {
             gameOver();
         }
+        StartCoroutine(cameraShake.Shake(0.15f, 0.2f));
         StartCoroutine(Flash());
         
 
