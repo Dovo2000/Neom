@@ -17,12 +17,15 @@ public class Enemies : MonoBehaviour {
     {
         health -= damage;
         StartCoroutine(Flash());
+
         if (health <= 0)
         {
 
             Destroy(enemy);
             deathCounter++;
+            
         }
+ 
     }
 
     IEnumerator Flash()
