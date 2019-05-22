@@ -202,7 +202,7 @@ public class MovimientoPlayer : MonoBehaviour
         bodyCollider.size = colliderCrouchSize;
         bodyCollider.offset = colliderCrouchOffset;
 
-        Vector2 fuerzaDeslizado = new Vector2(slideImpulse, 0);
+        Vector2 fuerzaDeslizado = new Vector2(slideImpulse*2, 0);
 
         rigidBody.AddForce(fuerzaDeslizado, ForceMode2D.Impulse);
     }
