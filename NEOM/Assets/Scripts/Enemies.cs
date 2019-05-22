@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,19 +14,19 @@ public class Enemies : MonoBehaviour {
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
 
+    public CameraShake cameraShake;
+
     public void TakeDamage(int damage)
     {
         health -= damage;
+        StartCoroutine(cameraShake.Shake(0.15f, 0.2f));
         StartCoroutine(Flash());
 
         if (health <= 0)
         {
-
-            Destroy(enemy);
             deathCounter++;
-            
+            Destroy(enemy);
         }
- 
     }
 
     IEnumerator Flash()

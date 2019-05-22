@@ -2,25 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour {
+public class CameraShake : MonoBehaviour
+{
 
-	public IEnumerator Shake(float duration, float magnitude)
+    private static bool mutex = false;
+    public IEnumerator Shake(float duration, float magnitude)
     {
-        Vector3 originalPos = transform.localPosition;
-
-        float elapsed = 0.0f;
-
-        while(elapsed < duration)
+        if (!mutex)
         {
-            float x = Random.Range(-1f, 1f) * magnitude;
-            float y = Random.Range(-1f, 1f) * magnitude;
+            mutex = true;
+            Vector3 originalPos = transform.localPosition;
+            float elapsed = 0.0f;
+            while (elapsed < duration)
+            {
+                float x = Random.Range(-1f, 1f) * magnitude;
+                float y = Random.Range(-0.5f, 0.5f) * magnitude;
 
-            transform.localPosition = new Vector3(x, y, originalPos.z);
-            elapsed += Time.deltaTime;
+                transform.localPosition = new Vector3(x, y, originalPos.z);
+                elapsed += Time.deltaTime;
 
-            yield return null;
+                yield return null;
+            }
+
+            transform.localPosition = originalPos;
+            mutex = false;
         }
-
-        transform.localPosition = originalPos;
     }
 }

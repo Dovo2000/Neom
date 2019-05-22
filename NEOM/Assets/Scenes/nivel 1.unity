@@ -113,6 +113,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &22580532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 22580533}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &22580533
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22580532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2006763892}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &63442278
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +256,7 @@ GameObject:
   - component: {fileID: 104402471}
   - component: {fileID: 104402470}
   - component: {fileID: 104402476}
+  - component: {fileID: 104402477}
   m_Layer: 10
   m_Name: Enemy3
   m_TagString: Untagged
@@ -272,6 +302,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 2006763893}
 --- !u!61 &104402472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -397,6 +428,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &104402477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104402469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414a311b5300cf04794e680443bb7e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &115604089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6677,6 +6719,7 @@ GameObject:
   - component: {fileID: 1799975277}
   - component: {fileID: 1799975276}
   - component: {fileID: 1799975282}
+  - component: {fileID: 1799975283}
   m_Layer: 10
   m_Name: Enemy1
   m_TagString: Untagged
@@ -6722,6 +6765,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 2006763893}
 --- !u!61 &1799975278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6847,6 +6891,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1799975283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799975275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414a311b5300cf04794e680443bb7e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1859169570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7646,6 +7701,7 @@ GameObject:
   - component: {fileID: 1998203289}
   - component: {fileID: 1998203288}
   - component: {fileID: 1998203294}
+  - component: {fileID: 1998203295}
   m_Layer: 10
   m_Name: Enemy2
   m_TagString: Untagged
@@ -7691,6 +7747,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 2006763893}
 --- !u!61 &1998203290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7816,6 +7873,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1998203295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998203287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414a311b5300cf04794e680443bb7e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004178444
 GameObject:
   m_ObjectHideFlags: 0
@@ -7980,9 +8048,9 @@ Transform:
   m_GameObject: {fileID: 2006763888}
   m_LocalRotation: {x: -0, y: -0, z: 0.00049638835, w: 0.9999999}
   m_LocalPosition: {x: -0.17, y: 1.4, z: -10.89}
-  m_LocalScale: {x: 1.2831522, y: 1.2831522, z: 0}
+  m_LocalScale: {x: 1.2831525, y: 1.2831525, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 22580533}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.057000004}
 --- !u!114 &2006763893
@@ -8382,7 +8450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 2006763893}
 --- !u!82 &2094813417
 AudioSource:
   m_ObjectHideFlags: 0
