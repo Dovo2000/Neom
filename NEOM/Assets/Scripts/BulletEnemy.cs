@@ -7,6 +7,7 @@ public class BulletEnemy : MonoBehaviour {
     public float speed = 20f;
     public Rigidbody2D rb;
     public int damage = 40;
+    public GameObject EnemyEffect;
     // Use this for initialization
     void Start()
     {
@@ -20,6 +21,8 @@ public class BulletEnemy : MonoBehaviour {
         {
             player.takeDamage(damage);
         }
+      //Instantiate(EnemyEffect, transform.position, transform.rotation);
+
         if(!hitInfo.CompareTag("Ladder") || !hitInfo.CompareTag("Trigger"))
             Destroy(gameObject);
     }
