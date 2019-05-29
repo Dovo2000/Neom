@@ -38,11 +38,13 @@ public class timer : MonoBehaviour {
         {
             countdownText.color = Color.yellow;
             transform.localScale = new Vector3(tamanyo * 1.5f, tamanyo * 1.5f, tamanyo);
+            transform.position = new Vector3(0, 8.27f, 0);
         }
         else if (tiempo <= 5)
         {
             countdownText.color = Color.black;
             transform.localScale = new Vector3(tamanyo * 2f, tamanyo * 2f, tamanyo * 2f);
+            transform.position = new Vector3(0, 8.0f, 0);
         }
         countdownText.text = tiempo.ToString("0");
         if (Input.GetKeyDown(KeyCode.Escape))
