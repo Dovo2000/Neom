@@ -14,12 +14,12 @@ public class Enemies : MonoBehaviour {
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
 
-    public CameraShake cameraShake;
+    //public CameraShake cameraShake;
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        StartCoroutine(cameraShake.Shake(0.15f, 0.2f));
+        //StartCoroutine(cameraShake.Shake(0.15f, 0.2f));
         StartCoroutine(Flash());
 
         if (health <= 0)
