@@ -1625,6 +1625,9 @@ MonoBehaviour:
   inicio: 13
   animatorTimer: {fileID: 2054193275}
   tamanyo: 1
+  cambio1: {r: 1, g: 0, b: 0, a: 1}
+  cambio2: {r: 1, g: 0.45490196, b: 0, a: 1}
+  cambio3: {r: 1, g: 1, b: 1, a: 1}
   countdownText: {fileID: 327688889}
 --- !u!114 &327688889
 MonoBehaviour:

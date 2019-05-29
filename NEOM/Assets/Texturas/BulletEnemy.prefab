@@ -92,6 +92,8 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 50526078111585986}
   damage: 40
+  EnemyEffect: {fileID: 1473625048454486, guid: 8c324435cdcf51b4fa0157462f732d4d,
+    type: 2}
 --- !u!212 &212102721385114074
 SpriteRenderer:
   m_ObjectHideFlags: 1
