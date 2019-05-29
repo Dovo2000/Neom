@@ -968,7 +968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.12, y: 8.59}
+  m_AnchoredPosition: {x: 0.95, y: 8.52}
   m_SizeDelta: {x: 1.737, y: 1.737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &263589736
@@ -1378,6 +1378,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 0}
 --- !u!61 &328990564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1535,7 +1536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.13699996, y: 8.196}
+  m_AnchoredPosition: {x: 0.93, y: 8.196}
   m_SizeDelta: {x: 1.713, y: 1.713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359391544
@@ -3977,6 +3978,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 0}
 --- !u!114 &1018314047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4423,6 +4425,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 0}
 --- !u!61 &1139046857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6588,6 +6591,7 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 0}
 --- !u!114 &1658522025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7329,7 +7333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 1765965978}
 --- !u!95 &1855115107
 Animator:
   serializedVersion: 3
