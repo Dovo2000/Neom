@@ -11,6 +11,7 @@ public class timer : MonoBehaviour {
     private float playerHealth;
     public Animator animatorTimer;
     public float tamanyo = 1;
+    float posicionamiento1, posicionamiento2;
 
     [SerializeField] Text countdownText;
 
@@ -19,13 +20,17 @@ public class timer : MonoBehaviour {
         tiempo = inicio;
         animatorTimer.SetFloat("Time", tiempo);
         playerHealth = Player.health;
-        transform.localScale = new Vector3(tamanyo, tamanyo, tamanyo); 
+        transform.localScale = new Vector3(tamanyo, tamanyo, tamanyo);
+        posicionamiento1 = transform.position.y - 0.15f;
+        posicionamiento2 = transform.position.y - 0.33f;
+
     }
 
     private void Update()
     {
         tiempo -= 1 * Time.deltaTime;
         animatorTimer.SetFloat("Time", tiempo);
+        
 
         if(tiempo < 0 )
         {
@@ -38,13 +43,13 @@ public class timer : MonoBehaviour {
         {
             countdownText.color = Color.yellow;
             transform.localScale = new Vector3(tamanyo * 1.5f, tamanyo * 1.5f, tamanyo);
-            transform.position = new Vector3(0, 8.27f, 0);
+            transform.position = new Vector3(0, posicionamiento1, 0);
         }
         else if (tiempo <= 5)
         {
             countdownText.color = Color.black;
             transform.localScale = new Vector3(tamanyo * 2f, tamanyo * 2f, tamanyo * 2f);
-            transform.position = new Vector3(0, 8.0f, 0);
+            transform.position = new Vector3(0, posicionamiento2, 0);
         }
         countdownText.text = tiempo.ToString("0");
         if (Input.GetKeyDown(KeyCode.Escape))
