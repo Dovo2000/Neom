@@ -21,7 +21,7 @@ public class BulletEnemy : MonoBehaviour {
         {
             player.takeDamage(damage);
         }
-      //Instantiate(EnemyEffect, transform.position, transform.rotation);
+      Instantiate(EnemyEffect, transform.position, transform.rotation);
 
         if(!hitInfo.CompareTag("Ladder") || !hitInfo.CompareTag("Trigger"))
             Destroy(gameObject);
