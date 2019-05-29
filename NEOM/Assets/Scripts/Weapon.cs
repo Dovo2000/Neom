@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour {
-    
+
     public Transform firePoint;
     public GameObject bulletPrefab;
     private int counterShots = 3;
