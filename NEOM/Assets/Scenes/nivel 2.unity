@@ -246,7 +246,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!114 &27793156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5777,7 +5776,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!50 &1326338213
 Rigidbody2D:
   serializedVersion: 4
@@ -6849,7 +6847,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!114 &1628056037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7820,7 +7817,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!50 &1776720940
 Rigidbody2D:
   serializedVersion: 4
@@ -8565,6 +8561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 246923548}
 --- !u!70 &2005150548
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

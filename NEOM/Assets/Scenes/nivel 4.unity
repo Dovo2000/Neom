@@ -1378,7 +1378,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!61 &328990564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3978,7 +3977,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!114 &1018314047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4425,7 +4423,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!61 &1139046857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6591,7 +6588,6 @@ MonoBehaviour:
   deathCounter: 0
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
-  cameraShake: {fileID: 0}
 --- !u!114 &1658522025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7333,6 +7329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
   colorByDefault: {r: 1, g: 1, b: 1, a: 1}
+  cameraShake: {fileID: 1765965978}
 --- !u!95 &1855115107
 Animator:
   serializedVersion: 3
