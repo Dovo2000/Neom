@@ -22,6 +22,11 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("Creditos");
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
     public void ReturnMenu()
     {
         SceneManager.LoadScene("Menu");
