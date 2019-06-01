@@ -1,24 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class soundCont : MonoBehaviour {
 
-    private AudioSource audioSrc;
+   //rivate AudioSource audioSrc;
 
-    private float musicVolume = 1f;
+    private static float musicVolume = 1f;
 
-	void Start () {
-        audioSrc = GetComponent<AudioSource>();
+    private static float SetVolumeFX = 1f;
+
+    //public static Slider slider = GetComponent<Slider>();
+
+
+    void Update () {
+        //slider.value = musicVolume;
+
+        Musicafondo.instance.musicSource.volume = musicVolume;
+        // audioSrc.volume = musicVolume;
+        Musicafondo.instance.efxSource.volume = SetVolumeFX;
+        Musicafondo.instance.efxSourceEnemy.volume = SetVolumeFX;
+
+
 	}
-	
 
-	void Update () {
-        audioSrc.volume = musicVolume;
-	}
-
+    
     public void SetVolume(float vol)
     {
         musicVolume = vol;
+    }
+
+    public void SetVolumeFx(float vol2)
+    {
+        SetVolumeFX = vol2;
     }
 }

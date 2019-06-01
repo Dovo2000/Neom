@@ -17,16 +17,20 @@ public class Blink : MonoBehaviour {
 
     public IEnumerator Blinking()
     {
-        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, alpha);
-        GetComponent<SpriteRenderer>().enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().color = new Color(13, 0, 255, alpha);
-        yield return new WaitForSeconds(0.05f);
-        GetComponent<SpriteRenderer>().enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
+        if (ToggleFondo.Efectos == true)
+        {
+
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, alpha);
+            GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().color = new Color(13, 0, 255, alpha);
+            yield return new WaitForSeconds(0.05f);
+            GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
