@@ -31,9 +31,6 @@ public class nextlevel2 : MonoBehaviour
 
             if (other.CompareTag("Player"))
             {
-
-
-                //Debug.Log("Colisiona con la puerta");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             }

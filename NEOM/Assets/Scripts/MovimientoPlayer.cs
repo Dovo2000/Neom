@@ -17,12 +17,7 @@ public class MovimientoPlayer : MonoBehaviour
     public float crouchSpeedDivisor = 3f;
     public float maxFallSpeed = -25f;
     public float slideImpulse = 500.0f;
-    /*
-    [Header("Jump Properties")]
-    public float jumpForce = 22.5f;
-    public float doubleJumpForce = 10.7f;
-    public int doubleJumpCounter = 0;
-    */
+    
     [Header("Enviroment Check Properties")]
     public float feetOffset = 0f;
     public float headDistance = 0.3f;
@@ -83,7 +78,7 @@ public class MovimientoPlayer : MonoBehaviour
 
         //Procesar Movimiento
         GroundMovement();
-        //MidAirMovement();
+        
 
         if(input.reset)
         {
@@ -110,7 +105,7 @@ public class MovimientoPlayer : MonoBehaviour
         if (headCheck)
         {
             isHeadBlocked = true;
-            // Debug.Log("Cabeza blockeeada!! el objeto que la bloquea es: "+headCheck.transform.tag);
+            
         }
 
     }
@@ -148,41 +143,7 @@ public class MovimientoPlayer : MonoBehaviour
         rigidBody.velocity = new Vector2(xVelocity, rigidBody.velocity.y);
     }
 
-    /*void MidAirMovement()
-    {
-        
-        
-        if(input.jumpPressed && !isJumping && isOnGround)
-        {  
-
-            isOnGround = false;
-            isJumping = true;
-            doubleJumpAllowed = false;
-
-            rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-        }
-        else if (isJumping)
-        {
-            if (!isOnGround && doubleJumpCounter == 0)
-                doubleJumpAllowed = true;
-            if (input.jumpPressed && doubleJumpAllowed && doubleJumpCounter == 0)
-            {
-                rigidBody.AddForce(new Vector2(0f, doubleJumpForce), ForceMode2D.Impulse);
-                doubleJumpCounter++;
-                doubleJumpAllowed = false;
-            }
-            if (isOnGround)
-            {
-                isJumping = false;
-                doubleJumpAllowed = false;
-                doubleJumpCounter = 0;
-            }                             
-        }
-        
-        if (rigidBody.velocity.y < maxFallSpeed)
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, maxFallSpeed);
-    }
-    */
+    
     void Crouch()
     {
         isCrouching = true;

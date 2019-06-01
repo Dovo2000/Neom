@@ -10,7 +10,7 @@ public class enemytrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Choca con el plaYER");
+
             enemy.force *= -1;
             enemy.transform.Rotate(0f, 180f, 0f);
         }

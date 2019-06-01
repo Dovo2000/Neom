@@ -8,7 +8,7 @@ public class BulletEnemy : MonoBehaviour {
     public Rigidbody2D rb;
     public int damage = 40;
     public GameObject EnemyEffect;
-    // Use this for initialization
+ 
     void Start()
     {
         rb.velocity = transform.right * speed;

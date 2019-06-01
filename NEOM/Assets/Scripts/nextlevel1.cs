@@ -21,18 +21,14 @@ public class nextlevel1 : MonoBehaviour {
         }
     }
 
-        private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(muerto1.deathCounter == 1 && muerto3.deathCounter == 1 && muerto2.deathCounter == 1)
         {
 
             if (other.CompareTag("Player"))
             {
-               
-
-                //Debug.Log("Colisiona con la puerta");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
             }
         }
 

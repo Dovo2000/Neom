@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
     public CameraShake cameraShake;
+    public AudioClip deathSound;
    
 
     public void takeDamage(float damage)
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            Musicafondo.instance.PlaySingle(deathSound);
             gameOver();
         }
         StartCoroutine(cameraShake.Shake(0.15f, 0.2f));

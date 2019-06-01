@@ -11,7 +11,8 @@ public class Weapon : MonoBehaviour {
 
     private float timeBtwShoots;
     private float startTimeBtwShoots = 0.5f;
-    public Blink blink; 
+    public Blink blink;
+    public AudioClip shootAudio;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class Weapon : MonoBehaviour {
             if (Input.GetButtonDown("Fire1"))
             {
                 StartCoroutine(blink.Blinking());
-                GetComponent<AudioSource>().Play();
+                Musicafondo.instance.PlaySingle(shootAudio);
                 Shoot();       
                 counterShots--;
             }

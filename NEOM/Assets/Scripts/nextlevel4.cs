@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class nextlevel4 : MonoBehaviour
 {
-
+    
     public int index;
 
     public Enemies muerto1;
@@ -31,9 +31,8 @@ public class nextlevel4 : MonoBehaviour
 
             if (other.CompareTag("Player"))
             {
-
-
-                //Debug.Log("Colisiona con la puerta");
+                Musicafondo.instance.musicSource.Stop();
+                MusicaMenu.instanceMenu.musicSource.Play();
                 SceneManager.LoadScene("Menu");
 
             }

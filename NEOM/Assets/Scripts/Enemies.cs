@@ -14,6 +14,8 @@ public class Enemies : MonoBehaviour {
     public Color colorToTurnTo = Color.red;
     public Color colorByDefault = Color.white;
 
+    public AudioClip deathSound;
+
     //public CameraShake cameraShake;
 
     public void TakeDamage(int damage)
@@ -24,6 +26,7 @@ public class Enemies : MonoBehaviour {
 
         if (health <= 0)
         {
+            Musicafondo.instance.PlaySingle(deathSound);
             deathCounter++;
             Destroy(enemy);
         }

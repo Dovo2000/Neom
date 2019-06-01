@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame()
     {
+        MusicaMenu.instanceMenu.musicSource.Stop();
+        Musicafondo.instance.musicSource.Play();
         Player.health = 100;
         SceneManager.LoadScene("nivel 1");
     }
