@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
     {
         MusicaMenu.instanceMenu.musicSource.Stop();
         Musicafondo.instance.musicSource.Play();
+        FinalTime.inicio = Time.realtimeSinceStartup;
         Player.health = 100;
         SceneManager.LoadScene("nivel 1");
     }

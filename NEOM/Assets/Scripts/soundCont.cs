@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class soundCont : MonoBehaviour {
 
-   //rivate AudioSource audioSrc;
-
     public static float musicVolume = 1f;
 
     public static float SetVolumeFX = 1f;
 
-    //public static Slider slider = GetComponent<Slider>();
     private void Start()
     {
         musicVolume = 1f;

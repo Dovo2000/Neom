@@ -31,8 +31,9 @@ public class nextlevel4 : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 Musicafondo.instance.musicSource.Stop();
-                MusicaMenu.instanceMenu.musicSource.Play();
-                SceneManager.LoadScene("Menu");
+                MusicaMenu.instanceMenu.musicSource.Play();              
+                FinalTime.final = Time.realtimeSinceStartup;
+                SceneManager.LoadScene("GameOver");
 
             }
         }
