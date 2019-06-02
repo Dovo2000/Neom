@@ -7,13 +7,6 @@ public class ladder : MonoBehaviour {
     public float velo = 6;
    
     // Use this for initialization
-    void start(){
-        }
-    void update()
-    {
-
-    }
-
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.tag == "Player" && Input.GetKey(KeyCode.W))

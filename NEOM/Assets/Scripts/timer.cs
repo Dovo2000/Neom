@@ -83,7 +83,6 @@ public class timer : MonoBehaviour {
     {
         for (int n = 0; n < 10; n++)
         {
-            Debug.Log(GetComponent<Text>().material.name);
             GetComponent<Text>().color = cambio1;
             yield return new WaitForSeconds(0.2f);
             GetComponent<Text>().color = cambio2;

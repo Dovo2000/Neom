@@ -14,7 +14,6 @@ public class nextlevel4 : MonoBehaviour
     public Enemies muerto4;
     public Animator animator;
 
-
     void Update()
     {
         if (muerto1.deathCounter == 1 && muerto3.deathCounter == 1 && muerto2.deathCounter == 1 && muerto4.deathCounter == 1)
@@ -31,9 +30,11 @@ public class nextlevel4 : MonoBehaviour
 
             if (other.CompareTag("Player"))
             {
-                Musicafondo.instance.musicSource.Stop();
-                MusicaMenu.instanceMenu.musicSource.Play();
-                SceneManager.LoadScene("Menu");
+                Musicafondo.instance.musicSource.pitch = 0.9f;
+                Musicafondo.instance.musicSource.volume = 0.2f;
+                Musicafondo.instance.musicSource.Play();
+                FinalTime.final = Time.realtimeSinceStartup;
+                SceneManager.LoadScene("GameOver");
 
             }
         }

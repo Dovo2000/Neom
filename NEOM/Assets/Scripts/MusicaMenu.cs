@@ -9,10 +9,10 @@ public class MusicaMenu : MonoBehaviour {
 
     void Awake()
     {
-        //Musicafondo.instance.musicSource.Stop();
         if (instanceMenu == null)
             instanceMenu = this;
         else if (instanceMenu != null)
             Destroy(this.gameObject);
+        
     }
 }

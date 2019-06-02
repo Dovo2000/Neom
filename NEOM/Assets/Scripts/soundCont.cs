@@ -5,23 +5,22 @@ using UnityEngine;
 
 public class soundCont : MonoBehaviour {
 
-   //rivate AudioSource audioSrc;
+    public static float musicVolume = 0.8f;
 
-    private static float musicVolume = 1f;
+    public static float SetVolumeFX = 0.8f;
 
-    private static float SetVolumeFX = 1f;
-
-    //public static Slider slider = GetComponent<Slider>();
-
+    private void Start()
+    {
+        musicVolume = 1f;
+        SetVolumeFX = 1f;
+    }
 
     void Update () {
-        //slider.value = musicVolume;
 
         Musicafondo.instance.musicSource.volume = musicVolume;
-        // audioSrc.volume = musicVolume;
         Musicafondo.instance.efxSource.volume = SetVolumeFX;
         Musicafondo.instance.efxSourceEnemy.volume = SetVolumeFX;
-
+        DontDestroyOnLoad(this.gameObject);
 
 	}
 
