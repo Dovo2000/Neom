@@ -925,6 +925,7 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 210752007}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
+  pause: 0
 --- !u!114 &210752003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1105,7 @@ MonoBehaviour:
   cambio1: {r: 1, g: 0.00000013311704, b: 0, a: 1}
   cambio2: {r: 1, g: 0.45490196, b: 0, a: 1}
   cambio3: {r: 1, g: 1, b: 1, a: 1}
+  pause: 0
   countdownText: {fileID: 244745252}
 --- !u!114 &244745252
 MonoBehaviour:
@@ -2368,6 +2370,7 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 501066886}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
+  pause: 0
 --- !u!114 &501066882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2760,6 +2763,7 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 659797226}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
+  pause: 0
 --- !u!114 &659797222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,7 +3201,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 695207283
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 24daf39d55a5c5c448acc7ca8cc7b263, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6045,6 +6049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1573371206}
   drawDebugRaycast: 1
+  pause: 0
   speed: 8
   crouchSpeedDivisor: 3
   maxFallSpeed: -25
