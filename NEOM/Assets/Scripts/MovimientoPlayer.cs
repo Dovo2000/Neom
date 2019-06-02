@@ -10,6 +10,8 @@ public class MovimientoPlayer : MonoBehaviour
     public bool drawDebugRaycast = true;        //Para dibujar el raycast que comprueba el entorno
     Weapon firePoint;
 
+    public bool pause = false;
+
 
     [Header("Movement Properties")]
     private float xVelocity;
@@ -73,18 +75,31 @@ public class MovimientoPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Comprobar el entorno lanzando rayos desde el player
-        PhysicsCheck();
-
-        //Procesar Movimiento
-        GroundMovement();
-        
-
-        if(input.reset)
+        if (Input.GetButtonDown("Pause"))
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-            Player.health = 100;
+            if (!pause)
+                pause = true;
+            else
+                pause = false;
+        }
+
+
+        if (!pause)
+        {
+
+            // Comprobar el entorno lanzando rayos desde el player
+            PhysicsCheck();
+
+            //Procesar Movimiento
+            GroundMovement();
+
+
+            if (input.reset)
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
+                Player.health = 100;
+            }
         }
     }
 

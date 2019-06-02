@@ -15,6 +15,8 @@ public class EnemyMovement : MonoBehaviour {
     public Animator animator;
     public AudioClip shootAudio;
 
+    public bool pause = false;
+
     void Start()
     {
         timeBtwShoots = startTimeBtwShoots;
@@ -31,27 +33,37 @@ public class EnemyMovement : MonoBehaviour {
 
     void FixedUpdate()
     {
-        
-        RaycastHit2D detectionInfo = Physics2D.Raycast(detectionPoint.position, detectionPoint.right, detectionRate);
-        if (detectionInfo)
+        if(Input.GetButtonDown("Pause"))
         {
-     
-            if (detectionInfo.transform.tag == "Player")
+            if (!pause)
+                pause = true;
+            else
+                pause = false;
+        }
+
+        if (!pause)
+        {
+            RaycastHit2D detectionInfo = Physics2D.Raycast(detectionPoint.position, detectionPoint.right, detectionRate);
+            if (detectionInfo)
             {
-               
-                animator.SetFloat("Speed", 0);
-                enemyShoot();
+
+                if (detectionInfo.transform.tag == "Player")
+                {
+
+                    animator.SetFloat("Speed", 0);
+                    enemyShoot();
+                }
+                else
+                {
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
+                    animator.SetFloat("Speed", Mathf.Abs(force));
+                }
             }
             else
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
                 animator.SetFloat("Speed", Mathf.Abs(force));
             }
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(force, 0));
-            animator.SetFloat("Speed", Mathf.Abs(force));
         }
     }
 

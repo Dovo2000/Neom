@@ -16,6 +16,8 @@ public class timer : MonoBehaviour {
     public Color cambio2 = Color.black;
     public Color cambio3 = Color.white;
 
+    public bool pause = false;
+
 
     [SerializeField] Text countdownText;
 
@@ -33,36 +35,48 @@ public class timer : MonoBehaviour {
 
     private void Update()
     {
-        tiempo -= 1 * Time.deltaTime;
-        animatorTimer.SetFloat("Time", tiempo);
-        
-
-        if(tiempo < 0 )
+        if (Input.GetButtonDown("Pause"))
         {
-            tiempo = 0;
-            Player.health = playerHealth;
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
-        else if(tiempo <= 10 && tiempo > 5)
-        {
-            countdownText.color = Color.yellow;
-            transform.localScale = new Vector3(tamanyo * 1.5f, tamanyo * 1.5f, tamanyo);
-            transform.position = new Vector3(0, posicionamiento1, 0);
-        }
-        else if (tiempo <= 5 && tiempo > 0)
-        {
-            StartCoroutine(FlashChrono());
-            transform.localScale = new Vector3(tamanyo * 2f, tamanyo * 2f, tamanyo * 2f);
-            transform.position = new Vector3(0, posicionamiento2, 0);
-            
-        }
-        countdownText.text = tiempo.ToString("0");
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("Menu");
+            if (!pause)
+                pause = true;
+            else
+                pause = false;
         }
 
+
+        if (!pause)
+        {
+            tiempo -= 1 * Time.deltaTime;
+            animatorTimer.SetFloat("Time", tiempo);
+
+
+            if (tiempo < 0)
+            {
+                tiempo = 0;
+                Player.health = playerHealth;
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
+            }
+            else if (tiempo <= 10 && tiempo > 5)
+            {
+                countdownText.color = Color.yellow;
+                transform.localScale = new Vector3(tamanyo * 1.5f, tamanyo * 1.5f, tamanyo);
+                transform.position = new Vector3(0, posicionamiento1, 0);
+            }
+            else if (tiempo <= 5 && tiempo > 0)
+            {
+                StartCoroutine(FlashChrono());
+                transform.localScale = new Vector3(tamanyo * 2f, tamanyo * 2f, tamanyo * 2f);
+                transform.position = new Vector3(0, posicionamiento2, 0);
+
+            }
+            countdownText.text = tiempo.ToString("0");
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Menu");
+            }
+
+        }
     }
 
     IEnumerator FlashChrono()
@@ -75,6 +89,5 @@ public class timer : MonoBehaviour {
             GetComponent<Text>().color = cambio2;
             yield return new WaitForSeconds(0.2f);
         }
-    }
-
+    }    
 }

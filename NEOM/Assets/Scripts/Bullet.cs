@@ -10,26 +10,21 @@ public class Bullet : MonoBehaviour {
     public GameObject impactEffect;
 
 	
-	void Start () {
+	void Start ()
+    {
         rb.velocity = transform.right * speed;
 	}
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        
         Enemies enemy = hitInfo.GetComponent<Enemies>();
         if(enemy != null)
         {
             enemy.TakeDamage(damage);
-
-            
         }
 
         Instantiate(impactEffect, transform.position, transform.rotation);
 
         Destroy(gameObject);
-
-        
     }
-
 }
