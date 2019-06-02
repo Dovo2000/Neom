@@ -7,14 +7,15 @@ public class soundCont : MonoBehaviour {
 
    //rivate AudioSource audioSrc;
 
-    private static float musicVolume = 1f;
+    public static float musicVolume = 1f;
 
-    private static float SetVolumeFX = 1f;
+    public static float SetVolumeFX = 1f;
 
     //public static Slider slider = GetComponent<Slider>();
     private void Start()
     {
-        musicVolume = Musicafondo.instance.musicSource.volume;
+        musicVolume = 1f;
+        SetVolumeFX = 1f;
     }
 
     void Update () {
