@@ -30,8 +30,9 @@ public class nextlevel4 : MonoBehaviour
 
             if (other.CompareTag("Player"))
             {
-                Musicafondo.instance.musicSource.Stop();
-                MusicaMenu.instanceMenu.musicSource.Play();              
+                Musicafondo.instance.musicSource.pitch = 0.9f;
+                Musicafondo.instance.musicSource.volume = 0.2f;
+                Musicafondo.instance.musicSource.Play();
                 FinalTime.final = Time.realtimeSinceStartup;
                 SceneManager.LoadScene("GameOver");
 

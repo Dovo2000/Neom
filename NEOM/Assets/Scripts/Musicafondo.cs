@@ -21,7 +21,14 @@ public class Musicafondo : MonoBehaviour {
         efxSource.volume = soundCont.SetVolumeFX;
         efxSourceEnemy.volume = soundCont.SetVolumeFX;
         //DontDestroyOnLoad(this.gameObject);
-    } 
+    }
+
+    private void Update()
+    {
+        musicSource.volume = soundCont.musicVolume;
+        efxSource.volume = soundCont.SetVolumeFX;
+        efxSourceEnemy.volume = soundCont.SetVolumeFX;
+    }
 
     public void PlaySingle(AudioClip clip)
     {

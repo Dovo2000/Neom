@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class soundCont : MonoBehaviour {
 
-    public static float musicVolume = 1f;
+    public static float musicVolume = 0.8f;
 
-    public static float SetVolumeFX = 1f;
+    public static float SetVolumeFX = 0.8f;
 
     private void Start()
     {

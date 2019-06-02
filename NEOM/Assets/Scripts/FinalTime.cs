@@ -14,9 +14,6 @@ public class FinalTime : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         tiempoFinal = final - inicio;
-        Debug.Log(inicio);
-        Debug.Log(final);
-        Debug.Log(tiempoFinal);
         Puntuacion.text = tiempoFinal.ToString();
 	}
 }

@@ -7,7 +7,8 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayGame()
     {
-        MusicaMenu.instanceMenu.musicSource.Stop();
+        Musicafondo.instance.musicSource.pitch = 1f;
+        Musicafondo.instance.musicSource.volume = soundCont.musicVolume;
         Musicafondo.instance.musicSource.Play();
         FinalTime.inicio = Time.realtimeSinceStartup;
         Player.health = 100;
@@ -16,7 +17,6 @@ public class MainMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        Debug.Log("QUIT!!");
         Application.Quit();
     }
 
@@ -27,15 +27,17 @@ public class MainMenu : MonoBehaviour {
 
     public void Settings()
     {
-        MusicaMenu.instanceMenu.musicSource.Stop();
+        Musicafondo.instance.musicSource.pitch = 1f;
+        Musicafondo.instance.musicSource.volume = soundCont.musicVolume;
         Musicafondo.instance.musicSource.Play();
         SceneManager.LoadScene("Settings");
     }
 
     public void ReturnMenu()
     {
-        Musicafondo.instance.musicSource.Stop();
-        MusicaMenu.instanceMenu.musicSource.Play();
+        Musicafondo.instance.musicSource.pitch = 0.9f;
+        Musicafondo.instance.musicSource.volume = 0.2f;
+        Musicafondo.instance.musicSource.Play();
         SceneManager.LoadScene("Menu");
     }
 }
