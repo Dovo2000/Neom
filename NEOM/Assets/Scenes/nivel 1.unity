@@ -12163,7 +12163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2094813418}
   drawDebugRaycast: 1
-  pause: 0
   speed: 8
   crouchSpeedDivisor: 3
   maxFallSpeed: -25

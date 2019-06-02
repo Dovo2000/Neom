@@ -424,7 +424,6 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 27793161}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
-  pause: 0
 --- !u!50 &27793157
 Rigidbody2D:
   serializedVersion: 4
@@ -1924,7 +1923,6 @@ MonoBehaviour:
   cambio1: {r: 1, g: 0, b: 0, a: 1}
   cambio2: {r: 1, g: 0.45490196, b: 0, a: 1}
   cambio3: {r: 1, g: 1, b: 1, a: 1}
-  pause: 0
   countdownText: {fileID: 327688889}
 --- !u!114 &327688889
 MonoBehaviour:
@@ -7912,7 +7910,6 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 1326338210}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
-  pause: 0
 --- !u!114 &1326338212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10186,7 +10183,6 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 1628056042}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
-  pause: 0
 --- !u!50 &1628056038
 Rigidbody2D:
   serializedVersion: 4
@@ -11320,7 +11316,6 @@ MonoBehaviour:
   startTimeBtwShoots: 0.5
   animator: {fileID: 1776720941}
   shootAudio: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
-  pause: 0
 --- !u!114 &1776720939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12479,7 +12474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2005150546}
   drawDebugRaycast: 1
-  pause: 0
   speed: 8
   crouchSpeedDivisor: 3
   maxFallSpeed: -25
