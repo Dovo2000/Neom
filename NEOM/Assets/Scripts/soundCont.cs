@@ -12,16 +12,17 @@ public class soundCont : MonoBehaviour {
     private static float SetVolumeFX = 1f;
 
     //public static Slider slider = GetComponent<Slider>();
-
+    private void Start()
+    {
+        musicVolume = Musicafondo.instance.musicSource.volume;
+    }
 
     void Update () {
-        //slider.value = musicVolume;
 
         Musicafondo.instance.musicSource.volume = musicVolume;
-        // audioSrc.volume = musicVolume;
         Musicafondo.instance.efxSource.volume = SetVolumeFX;
         Musicafondo.instance.efxSourceEnemy.volume = SetVolumeFX;
-
+        DontDestroyOnLoad(this.gameObject);
 
 	}
 

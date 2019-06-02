@@ -14,7 +14,6 @@ public class nextlevel4 : MonoBehaviour
     public Enemies muerto4;
     public Animator animator;
 
-
     void Update()
     {
         if (muerto1.deathCounter == 1 && muerto3.deathCounter == 1 && muerto2.deathCounter == 1 && muerto4.deathCounter == 1)

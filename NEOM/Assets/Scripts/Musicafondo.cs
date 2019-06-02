@@ -17,7 +17,7 @@ public class Musicafondo : MonoBehaviour {
         else if (instance != null)
             Destroy(this.gameObject);
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     } 
 
     public void PlaySingle(AudioClip clip)

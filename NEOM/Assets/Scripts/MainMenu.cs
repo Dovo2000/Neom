@@ -26,11 +26,15 @@ public class MainMenu : MonoBehaviour {
 
     public void Settings()
     {
+        MusicaMenu.instanceMenu.musicSource.Stop();
+        Musicafondo.instance.musicSource.Play();
         SceneManager.LoadScene("Settings");
     }
 
     public void ReturnMenu()
     {
+        Musicafondo.instance.musicSource.Stop();
+        MusicaMenu.instanceMenu.musicSource.Play();
         SceneManager.LoadScene("Menu");
     }
 }
